@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gm4ycwjyvw54" path="res://assets/TESTONLY/2DPCT_Walk.png" id="1_abrql"]
 [ext_resource type="Script" uid="uid://bd86081xkxcfn" path="res://entities/player/player.gd" id="2_abrql"]
+[ext_resource type="Resource" uid="uid://bp4b74uqyp4qa" path="res://entities/player/player.tres" id="3_sglur"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglur"]
 atlas = ExtResource("1_abrql")
@@ -67,7 +68,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="AnimatedSprite2D" unique_id=723710504]
+[node name="Player" type="AnimatedSprite2D" unique_id=723710504 groups=["entities", "player"]]
 sprite_frames = SubResource("SpriteFrames_s1fef")
-frame_progress = 0.6096145
+frame_progress = 0.09709976
 script = ExtResource("2_abrql")
+entity_resource = ExtResource("3_sglur")
+
+[node name="BulletPlaceholder" type="Label" parent="." unique_id=458062757]
+visible = false
+offset_left = -13.0
+offset_top = -16.0
+offset_right = 14.0
+offset_bottom = -4.0
+theme_override_font_sizes/font_size = 8
+text = "*Bam*"
+
+[node name="BulletPHTimer" type="Timer" parent="." unique_id=111385604]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="timeout" from="BulletPHTimer" to="." method="_on_bullet_ph_timer_timeout"]

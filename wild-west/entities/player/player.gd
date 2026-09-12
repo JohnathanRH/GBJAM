@@ -1,12 +1,11 @@
 extends Entity
 class_name Player
 
+@onready var enemy: Entity = get_tree().get_first_node_in_group("enemies") as Enemy
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func fire_bullet() -> void:
+	if selected_bullet:
+		selected_bullet.fire(enemy)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#func _on_bullet_ph_timer_timeout() -> void:
+	#$BulletPlaceholder.visible = false

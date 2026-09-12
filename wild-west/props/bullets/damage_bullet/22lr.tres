@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DamageBullet" format=3 uid="uid://dulgcwk5ykdbo"]
+
+[ext_resource type="Script" uid="uid://11p4xq0oh645" path="res://props/bullets/damage_bullet/damage_bullet.gd" id="1_isspl"]
+
+[resource]
+script = ExtResource("1_isspl")
+potency = 1.0
+metadata/_custom_type_script = "uid://11p4xq0oh645"

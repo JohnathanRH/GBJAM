@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityResource" format=3 uid="uid://bp4b74uqyp4qa"]
+
+[ext_resource type="Script" uid="uid://c0lodpuau3xw2" path="res://common/resources/bullet.gd" id="1_5m764"]
+[ext_resource type="Texture2D" uid="uid://bd1icnfhvywqa" path="res://icon.svg" id="1_irhpw"]
+[ext_resource type="Script" uid="uid://dwfgbovhpre8f" path="res://common/resources/entity.gd" id="3_3cha7"]
+
+[resource]
+script = ExtResource("3_3cha7")
+hp = 10.0
+gauge_icon = ExtResource("1_irhpw")
+metadata/_custom_type_script = "uid://dwfgbovhpre8f"
