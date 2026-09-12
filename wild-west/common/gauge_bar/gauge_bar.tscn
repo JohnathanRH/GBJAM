@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dl5grlf6nqrtr"]
+
+[ext_resource type="Script" uid="uid://bgeaa4185cpc1" path="res://common/gauge_bar/gauge_bar.gd" id="1_1tfom"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1tfom"]
+
+[node name="GaugeBar" type="Node2D" unique_id=1877537307]
+script = ExtResource("1_1tfom")
+
+[node name="Bar" type="Sprite2D" parent="." unique_id=362678822]
+position = Vector2(67, 2)
+scale = Vector2(134.99998, 4.0000105)
+texture = SubResource("PlaceholderTexture2D_1tfom")

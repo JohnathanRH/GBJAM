@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://d38lxq2d0n56j"]
+
+[ext_resource type="Texture2D" uid="uid://gm4ycwjyvw54" path="res://assets/TESTONLY/2DPCT_Walk.png" id="1_abrql"]
+[ext_resource type="Script" uid="uid://bd86081xkxcfn" path="res://entities/player/player.gd" id="2_abrql"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglur"]
+atlas = ExtResource("1_abrql")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bls4j"]
+atlas = ExtResource("1_abrql")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkugw"]
+atlas = ExtResource("1_abrql")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fjmc"]
+atlas = ExtResource("1_abrql")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiwj3"]
+atlas = ExtResource("1_abrql")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26q78"]
+atlas = ExtResource("1_abrql")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bectd"]
+atlas = ExtResource("1_abrql")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvtmh"]
+atlas = ExtResource("1_abrql")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s1fef"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bls4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkugw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fjmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiwj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26q78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bectd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvtmh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="AnimatedSprite2D" unique_id=723710504]
+sprite_frames = SubResource("SpriteFrames_s1fef")
+frame_progress = 0.6096145
+script = ExtResource("2_abrql")
