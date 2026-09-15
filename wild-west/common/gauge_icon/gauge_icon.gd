@@ -6,6 +6,7 @@ var start_position: Vector2
 var end_position: Vector2
 var entity: Entity
 var filled_ratio: float
+var safe_segment: float
 
 @onready var x_difference = end_position.x - start_position.x
 

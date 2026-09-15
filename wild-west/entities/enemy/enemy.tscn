@@ -71,17 +71,3 @@ animations = [{
 self_modulate = Color(1, 0.2627451, 0.08627451, 1)
 sprite_frames = SubResource("SpriteFrames_3fvr7")
 script = ExtResource("1_ksmh7")
-
-[node name="BulletPlaceholder" type="Label" parent="." unique_id=511017424]
-visible = false
-offset_left = -26.0
-offset_top = -31.0
-offset_right = 27.0
-offset_bottom = -8.0
-text = "*bam*"
-
-[node name="BulletPHTimer" type="Timer" parent="." unique_id=203609575]
-wait_time = 0.6
-one_shot = true
-
-[connection signal="timeout" from="BulletPHTimer" to="." method="_on_bullet_ph_timer_timeout"]

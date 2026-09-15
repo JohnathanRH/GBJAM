@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="SlowGauge" format=3 uid="uid://bj66et3eljn67"]
+[gd_resource type="Resource" script_class="LingeringBullet" format=3 uid="uid://bj66et3eljn67"]
 
-[ext_resource type="Script" uid="uid://ce4g4orp0to1x" path="res://props/bullets/slow_gauge/slow_gauge.gd" id="1_6nfrn"]
+[ext_resource type="Script" uid="uid://dgfaw587hlaxj" path="res://common/resources/lingering_bullet.gd" id="1_6nfrn"]
+[ext_resource type="PackedScene" uid="uid://dn326kr01lrv2" path="res://props/bullets/slow_gauge/slow_gauge_scene.tscn" id="2_714eg"]
 
 [resource]
 script = ExtResource("1_6nfrn")
 linger_duration = 2.0
+effect_scene = ExtResource("2_714eg")
 potency = 0.1
-metadata/_custom_type_script = "uid://ce4g4orp0to1x"
+metadata/_custom_type_script = "uid://dgfaw587hlaxj"

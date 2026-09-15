@@ -5,8 +5,8 @@ var icon_scn = preload("res://common/gauge_icon/gauge_icon.tscn")
 
 @export var duration: float = 2.0
 @export var icon_offset: float = 7.0
+@export var safe_segment: float = 7.0
 
-#var icons: Dictionary[Entity, GaugeIcon]
 var end_position: Vector2
 
 func _ready() -> void:
@@ -20,4 +20,5 @@ func _ready() -> void:
 		icon.entity = entity
 		
 		add_child(icon)
-		#icons[entity] = icon
+	
+	

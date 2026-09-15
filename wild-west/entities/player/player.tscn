@@ -73,18 +73,3 @@ sprite_frames = SubResource("SpriteFrames_s1fef")
 frame_progress = 0.09709976
 script = ExtResource("2_abrql")
 entity_resource = ExtResource("3_sglur")
-
-[node name="BulletPlaceholder" type="Label" parent="." unique_id=458062757]
-visible = false
-offset_left = -13.0
-offset_top = -16.0
-offset_right = 14.0
-offset_bottom = -4.0
-theme_override_font_sizes/font_size = 8
-text = "*Bam*"
-
-[node name="BulletPHTimer" type="Timer" parent="." unique_id=111385604]
-wait_time = 0.6
-one_shot = true
-
-[connection signal="timeout" from="BulletPHTimer" to="." method="_on_bullet_ph_timer_timeout"]

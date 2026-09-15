@@ -8,11 +8,9 @@ func _ready() -> void:
 	select_random_bullet()
 
 func fire_bullet() -> void:
-	if selected_bullet:
-		print("Enemy fired "+ selected_bullet.resource_name)
+	if selected_bullet and player.vulnerable:
 		selected_bullet.fire(player)
 	select_random_bullet()
 
 func select_random_bullet() -> void:
 	selected_bullet = bullets.pick_random()
-	print(selected_bullet)

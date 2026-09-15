@@ -12,6 +12,7 @@ var selected_bullet: BulletResource
 var gauge_filled: float = 0.0
 var gauge_tween: Tween
 var under_influence: Dictionary[String, LingeringBullet]
+var vulnerable: bool = false
 
 func _init() -> void:
 	add_to_group("entities")
@@ -20,6 +21,13 @@ func _ready() -> void:
 	mirror_entity_resource()
 	fill_gauge()
 	play()
+
+func _physics_process(delta: float) -> void:
+	var gauge_filled_ratio = gauge_filled / max_gauge
+	if gauge_filled_ratio <= 0.7:
+		vulnerable = false
+	else:
+		vulnerable = true
 
 func fill_gauge() -> void:
 	gauge_tween = create_tween()
@@ -36,23 +44,6 @@ func reset_gauge() -> void:
 		gauge_tween.kill()
 	gauge_filled = 0.0
 	fill_gauge()
-
-func register_influence(bullet: LingeringBullet) -> void:
-	var timer = LingerTimer.new()
-	timer.wait_time = bullet.linger_duration
-	timer.timeout.connect(bullet.reset_effect)
-	timer.timeout.connect(checkout_influence)
-	add_child(timer)
-	
-	#under_influence[bullet.resource_name] = bullet
-	
-
-func checkout_influence() -> void:
-	print("Checked out")
-	pass
-	#under_influence
-	#under_influence.front
-	#under_influence.pop_front()
 
 func mirror_entity_resource() -> void:
 	hp = entity_resource.hp

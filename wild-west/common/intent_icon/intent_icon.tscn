@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ca817mde78wuq"]
+
+[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="1_e3iqh"]
+
+[node name="IntentIcon" type="Sprite2D" unique_id=1389489436]
+texture = ExtResource("1_e3iqh")

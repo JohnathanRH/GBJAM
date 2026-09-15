@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
 [ext_resource type="Script" uid="uid://c0lodpuau3xw2" path="res://common/resources/bullet.gd" id="3_bq5v2"]
 [ext_resource type="Resource" uid="uid://dulgcwk5ykdbo" path="res://props/bullets/damage_bullet/22lr.tres" id="4_bq5v2"]
-[ext_resource type="Resource" uid="uid://bj66et3eljn67" path="res://props/bullets/slow_gauge/regular.tres" id="5_cuh3k"]
 [ext_resource type="Script" uid="uid://dwfgbovhpre8f" path="res://common/resources/entity.gd" id="7_q5ngc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
@@ -15,7 +14,7 @@
 script = ExtResource("7_q5ngc")
 hp = 10.0
 gauge_duration = 7.0
-bullets = Array[ExtResource("3_bq5v2")]([ExtResource("4_bq5v2"), ExtResource("5_cuh3k")])
+bullets = Array[ExtResource("3_bq5v2")]([ExtResource("4_bq5v2")])
 gauge_icon = ExtResource("1_nwy7p")
 metadata/_custom_type_script = "uid://dwfgbovhpre8f"
 
@@ -31,6 +30,10 @@ texture = SubResource("PlaceholderTexture2D_s1fef")
 position = Vector2(27.000008, 69.000015)
 
 [node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
+position = Vector2(127.00001, 69)
+entity_resource = SubResource("Resource_5m764")
+
+[node name="Enemy2" parent="." unique_id=31465197 instance=ExtResource("2_phyky")]
 position = Vector2(127.00001, 69)
 entity_resource = SubResource("Resource_5m764")
 
