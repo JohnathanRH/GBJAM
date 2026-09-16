@@ -2,9 +2,11 @@ extends Entity
 class_name Enemy
 
 @onready var player = get_tree().get_first_node_in_group("player") as Player
+signal targeted(status: bool)
 
 func _ready() -> void:
 	super._ready()
+	targeted.connect(toggle_targeted_icon)
 	select_random_bullet()
 
 func fire_bullet() -> void:
@@ -17,3 +19,6 @@ func select_random_bullet() -> void:
 
 func death() -> void:
 	pass
+
+func toggle_targeted_icon(targeted: bool) -> void:
+	$TargetedIcon.visible = targeted

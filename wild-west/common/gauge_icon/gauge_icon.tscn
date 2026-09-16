@@ -3,5 +3,5 @@
 [ext_resource type="Script" uid="uid://dchwfsxus1o6a" path="res://common/gauge_icon/gauge_icon.gd" id="2_vruvn"]
 
 [node name="GaugeIcon" type="Sprite2D" unique_id=1120436396]
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.75, 0.75)
 script = ExtResource("2_vruvn")

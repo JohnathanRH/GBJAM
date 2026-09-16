@@ -1,21 +1,41 @@
 [gd_scene format=3 uid="uid://cwcupajhgky7e"]
 
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
-[ext_resource type="Texture2D" uid="uid://bd1icnfhvywqa" path="res://icon.svg" id="1_nwy7p"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
 [ext_resource type="Script" uid="uid://c0lodpuau3xw2" path="res://common/resources/bullet.gd" id="3_bq5v2"]
 [ext_resource type="Resource" uid="uid://cvjc7kff05eej" path="res://props/bullets/damage_bullet/9mm.tres" id="4_eljhn"]
+[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="5_bq5v2"]
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="7_cuh3k"]
 [ext_resource type="Script" uid="uid://dwfgbovhpre8f" path="res://common/resources/entity.gd" id="7_q5ngc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
 
+[sub_resource type="Resource" id="Resource_eljhn"]
+script = ExtResource("7_q5ngc")
+hp = 10.0
+gauge_duration = 5.7
+bullets = Array[ExtResource("3_bq5v2")]([ExtResource("4_eljhn")])
+safe_segment = 0.7
+gauge_icon = ExtResource("7_cuh3k")
+metadata/_custom_type_script = "uid://dwfgbovhpre8f"
+
+[sub_resource type="Resource" id="Resource_bq5v2"]
+script = ExtResource("7_q5ngc")
+hp = 10.0
+gauge_duration = 6.3
+bullets = Array[ExtResource("3_bq5v2")]([ExtResource("4_eljhn")])
+safe_segment = 0.7
+gauge_icon = ExtResource("5_bq5v2")
+metadata/_custom_type_script = "uid://dwfgbovhpre8f"
+
 [sub_resource type="Resource" id="Resource_5m764"]
 script = ExtResource("7_q5ngc")
 hp = 10.0
-gauge_duration = 4.7
+gauge_duration = 7.0
 bullets = Array[ExtResource("3_bq5v2")]([ExtResource("4_eljhn")])
-gauge_icon = ExtResource("1_nwy7p")
+safe_segment = 0.7
+gauge_icon = ExtResource("7_cuh3k")
 metadata/_custom_type_script = "uid://dwfgbovhpre8f"
 
 [node name="MainGame" type="Node2D" unique_id=808725349]
@@ -30,7 +50,15 @@ texture = SubResource("PlaceholderTexture2D_s1fef")
 position = Vector2(27.000008, 69.000015)
 
 [node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
-position = Vector2(127.00001, 69)
+position = Vector2(127.00001, 89)
+entity_resource = SubResource("Resource_eljhn")
+
+[node name="Enemy2" parent="." unique_id=44699363 instance=ExtResource("2_phyky")]
+position = Vector2(127, 69)
+entity_resource = SubResource("Resource_bq5v2")
+
+[node name="Enemy3" parent="." unique_id=1524630865 instance=ExtResource("2_phyky")]
+position = Vector2(127.00001, 48)
 entity_resource = SubResource("Resource_5m764")
 
 [node name="GaugeBar" parent="." unique_id=850369798 instance=ExtResource("2_hs5nc")]

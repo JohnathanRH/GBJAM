@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://dltujqffb3gm4"]
 
+[ext_resource type="Script" uid="uid://2wcfdb8vpcwo" path="res://entities/player/player_control.gd" id="1_pgoio"]
+
 [node name="PlayerControl" type="Node" unique_id=1905000433]
+script = ExtResource("1_pgoio")

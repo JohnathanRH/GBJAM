@@ -15,6 +15,9 @@ func _ready() -> void:
 		print("WARNING: No gauge icon detected in "+ entity.name +" resource")
 	texture = entity.entity_resource.gauge_icon
 	position = start_position
+	
+	if entity is Enemy:
+		entity.targeted.connect(_on_entity_targeted)
 
 func _process(delta: float) -> void:
 	filled_ratio = entity.gauge_filled / entity.max_gauge
@@ -23,3 +26,9 @@ func _process(delta: float) -> void:
 
 func reset() -> void:
 	position = start_position
+
+func _on_entity_targeted(status: bool) -> void:
+	if status:
+		scale += Vector2(0.25, 0.25)
+	else:
+		scale -= Vector2(0.25, 0.25)
