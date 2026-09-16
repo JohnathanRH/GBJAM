@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name BehaviourMan
 
 @export var initBehaviour : Behaviour
@@ -7,6 +7,12 @@ var behaviours := {} as Dictionary
 
 signal BehaviourEntered(behaviour: Behaviour)
 signal BehaviourExited(behaviour: Behaviour)
+
+# Start the state machine at any point in time, rather than at _ready()
+func start_with(behaviour: Behaviour):
+	if currentBehaviour == null:
+		currentBehaviour = behaviour
+		currentBehaviour.Enter()
 
 func add_new_behaviour(behaviour : Behaviour) -> void:
 	add_child(behaviour)

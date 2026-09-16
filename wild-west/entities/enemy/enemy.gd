@@ -4,21 +4,36 @@ class_name Enemy
 @onready var player = get_tree().get_first_node_in_group("player") as Player
 signal targeted(status: bool)
 
+#var intents: Array[Intent]
+var selected_intent: Intent
+
 func _ready() -> void:
 	super._ready()
 	targeted.connect(toggle_targeted_icon)
 	select_random_bullet()
 
 func fire_bullet() -> void:
-	if selected_bullet:
-		selected_bullet.fire(player)
-	select_random_bullet()
-
+	var current_intent = $BehaviourMan.currentBehaviour as Intent
+	if current_intent:
+		current_intent.ChangeBehaviour.emit(current_intent, selected_intent.name)
+	else:
+		$BehaviourMan.start_with(selected_intent)
+	
 func select_random_bullet() -> void:
-	selected_bullet = bullets.pick_random()
+	var intents = $BehaviourMan.get_children()
+	selected_intent = intents.pick_random()
 
 func death() -> void:
 	pass
 
 func toggle_targeted_icon(targeted: bool) -> void:
 	$TargetedIcon.visible = targeted
+
+func mirror_entity_resource() -> void:
+	super.mirror_entity_resource()
+	if entity_resource is EnemyResource:
+		for packed_intent in entity_resource.intents:
+			
+			var intent = packed_intent.instantiate()
+			#intents.push_back(intent)
+			$BehaviourMan.add_new_behaviour(intent)

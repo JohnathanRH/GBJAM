@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://v5wm3ypwcgt"]
+
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_7hicu"]
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="1_tih4o"]
+[ext_resource type="PackedScene" uid="uid://82xv5ya3eubr" path="res://props/intents/damage/light_damage.tscn" id="2_3egju"]
+
+[resource]
+script = ExtResource("1_7hicu")
+intents = Array[PackedScene]([ExtResource("2_3egju")])
+hp = 10.0
+gauge_duration = 4.75
+gauge_icon = ExtResource("1_tih4o")
+metadata/_custom_type_script = "uid://dh7bfboklvbvo"

@@ -8,8 +8,6 @@ var float_text_scn = preload("res://common/float_up_text/float_up_text.tscn")
 var hp: float
 var gauge_duration: float = 5.0
 var max_gauge: float = 5.0
-var bullets: Array[BulletResource]
-var selected_bullet: BulletResource
 
 var gauge_filled: float = 0.0
 var under_influence: Dictionary[String, LingeringBullet]
@@ -39,7 +37,6 @@ func _physics_process(delta: float) -> void:
 func mirror_entity_resource() -> void:
 	hp = entity_resource.hp
 	gauge_duration = entity_resource.gauge_duration
-	bullets = entity_resource.bullets
 	max_gauge = entity_resource.max_gauge
 
 func receive_damage(dam: float):

@@ -1,7 +1,7 @@
 extends Node
 class_name Behaviour
 
-@onready var behaviour_man := self.get_parent() as BehaviourMan
+@onready var manager := self.get_parent() as BehaviourMan
 
 signal ChangeBehaviour
 
