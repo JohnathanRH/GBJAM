@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ol3b7q56ftf0"]
+
+[ext_resource type="Script" uid="uid://bja1e32xaf3mv" path="res://common/gauge_fill/gauge_tween.gd" id="1_02rsw"]
+
+[node name="GaugeTween" type="Node" unique_id=1799363650]
+script = ExtResource("1_02rsw")

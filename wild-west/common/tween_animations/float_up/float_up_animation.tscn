@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://h3fxjiu2rvve"]
+
+[ext_resource type="Script" uid="uid://bwbixgojfrj8q" path="res://common/tween_animations/float_up/float_up.gd" id="1_2rysy"]
+
+[node name="FloatUpAnimation" type="Node" unique_id=2009179302]
+script = ExtResource("1_2rysy")
+
+[node name="FinishDelay" type="Timer" parent="." unique_id=954149219]
+
+[connection signal="timeout" from="FinishDelay" to="." method="_on_finish_delay_timeout"]

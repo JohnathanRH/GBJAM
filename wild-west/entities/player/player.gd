@@ -7,3 +7,6 @@ func fire_bullet() -> void:
 	if selected_bullet and enemy.vulnerable:
 		selected_bullet.fire(enemy)
 	
+
+func death() -> void:
+	pass

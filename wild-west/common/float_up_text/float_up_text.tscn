@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://x7kbd4u2cfnc"]
+
+[ext_resource type="Script" uid="uid://byf0lckyiofbs" path="res://common/float_up_text/float_up_text.gd" id="1_77rtt"]
+[ext_resource type="PackedScene" uid="uid://h3fxjiu2rvve" path="res://common/tween_animations/float_up/float_up_animation.tscn" id="2_77rtt"]
+
+[node name="FloatUpText" type="Label" unique_id=1455399636]
+offset_right = 12.0
+offset_bottom = 12.0
+theme_override_font_sizes/font_size = 8
+text = "1.0"
+script = ExtResource("1_77rtt")
+
+[node name="FloatUpAnimation" parent="." unique_id=2009179302 instance=ExtResource("2_77rtt")]
+auto_play = true

@@ -7,5 +7,6 @@
 [resource]
 script = ExtResource("3_3cha7")
 hp = 10.0
+safe_segment = 0.7
 gauge_icon = ExtResource("1_irhpw")
 metadata/_custom_type_script = "uid://dwfgbovhpre8f"

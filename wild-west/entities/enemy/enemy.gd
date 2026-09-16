@@ -8,9 +8,12 @@ func _ready() -> void:
 	select_random_bullet()
 
 func fire_bullet() -> void:
-	if selected_bullet and player.vulnerable:
+	if selected_bullet:
 		selected_bullet.fire(player)
 	select_random_bullet()
 
 func select_random_bullet() -> void:
 	selected_bullet = bullets.pick_random()
+
+func death() -> void:
+	pass

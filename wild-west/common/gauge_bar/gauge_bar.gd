@@ -5,7 +5,6 @@ var icon_scn = preload("res://common/gauge_icon/gauge_icon.tscn")
 
 @export var duration: float = 2.0
 @export var icon_offset: float = 7.0
-@export var safe_segment: float = 7.0
 
 var end_position: Vector2
 
