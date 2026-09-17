@@ -1,17 +1,15 @@
+@abstract
 extends BulletResource
 class_name LingeringBullet
 
 @export var linger_duration: float
+@export var effect_potency: float
 @export var effect_scene: PackedScene
 
-func fire(at: Entity) -> void:
+func status_effect() -> StatusEffect:
 	var effect = effect_scene.instantiate() as StatusEffect
-	effect.potency = potency
+	effect.potency = effect_potency
 	
 	if linger_duration:
 		effect.add_duration(linger_duration)
-	
-	at.add_child(effect)
-
-func manual_fire(at: Entity) -> void:
-	pass
+	return effect

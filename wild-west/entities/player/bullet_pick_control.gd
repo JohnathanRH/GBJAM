@@ -19,8 +19,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		player.selected_bullet = container.select(pointer)
 	
 	if event.is_action_pressed("A"):
-		pass
-		#player.selected_bullet.
+		for enemy in player.selected_targets:
+			player.selected_bullet.manual_fire(enemy)
 
 func set_pointer(value: int) -> void:
 	#print(pointer, " ", container.get_child_count(), " ", pointer >= container.get_child_count())
