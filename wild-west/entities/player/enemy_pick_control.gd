@@ -6,23 +6,27 @@ extends Node
 	set = set_pointer
 
 func _ready() -> void:
+	player.bullet_selected.connect(target_enemies)
 	enemies.assign(get_tree().get_nodes_in_group("enemies"))
-	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pad_up"):
 		pointer += 1
-		untarget_enemies()
-		player.selected_targets = target_enemies(player.selected_bullet.target_amount)
+		#untarget_enemies()
+		target_enemies()
 	
 	if event.is_action_pressed("pad_down"):
 		pointer -= 1
-		untarget_enemies()
-		player.selected_targets = target_enemies(player.selected_bullet.target_amount)
+		#untarget_enemies()
+		target_enemies()
+	
 
-func target_enemies(amount: int) -> Array[Enemy]:
+func target_enemies() -> void:
+	untarget_enemies()
+	var amount = player.selected_bullet.target_amount
 	var arr: Array[Enemy]
 	for i in amount:
+		#print("A")
 		if i == 0:
 			enemies[pointer].targeted.emit(true)
 			arr.push_back(enemies[pointer])
@@ -38,9 +42,10 @@ func target_enemies(amount: int) -> Array[Enemy]:
 				enemies[chooser].targeted.emit(true)
 				arr.push_back(enemies[chooser])
 	print(arr)
-	return arr
+	player.selected_targets = arr
 
 func untarget_enemies() -> void:
+	#print(player.selected_targets)
 	for enemy in player.selected_targets:
 		enemy.targeted.emit(false)
 

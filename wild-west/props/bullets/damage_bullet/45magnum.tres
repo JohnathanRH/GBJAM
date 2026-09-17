@@ -1,8 +1,10 @@
 [gd_resource type="Resource" script_class="DamageBullet" format=3 uid="uid://cl17as3rpqntr"]
 
+[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="1_kq41l"]
 [ext_resource type="Script" uid="uid://11p4xq0oh645" path="res://props/bullets/damage_bullet/damage_bullet.gd" id="1_qcfd5"]
 
 [resource]
 script = ExtResource("1_qcfd5")
+icon = ExtResource("1_kq41l")
 potency = 3.0
 metadata/_custom_type_script = "uid://11p4xq0oh645"

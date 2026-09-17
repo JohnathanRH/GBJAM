@@ -28,6 +28,7 @@ func reset() -> void:
 	position = start_position
 
 func _on_entity_targeted(status: bool) -> void:
+	#print(status)
 	if status:
 		scale += Vector2(0.25, 0.25)
 	else:

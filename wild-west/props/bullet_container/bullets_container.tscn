@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cqqof33xxdhtc"]
+
+[ext_resource type="Script" uid="uid://b74cd5doip8w4" path="res://props/bullet_container/bullets_container.gd" id="1_5kw6b"]
+
+[node name="BulletsContainer" type="HBoxContainer" unique_id=1487478112 groups=["bullets_container"]]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5kw6b")

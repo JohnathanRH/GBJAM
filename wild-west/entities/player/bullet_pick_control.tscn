@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bxxpunf4e5xt5"]
+
+[ext_resource type="Script" uid="uid://np77u60qe53w" path="res://entities/player/bullet_pick_control.gd" id="1_jh0ss"]
+
+[node name="BulletPickControl" type="Node" unique_id=1128783688]
+script = ExtResource("1_jh0ss")
