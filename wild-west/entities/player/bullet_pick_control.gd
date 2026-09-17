@@ -20,6 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("A"):
 		pass
+		#player.selected_bullet.
 
 func set_pointer(value: int) -> void:
 	#print(pointer, " ", container.get_child_count(), " ", pointer >= container.get_child_count())

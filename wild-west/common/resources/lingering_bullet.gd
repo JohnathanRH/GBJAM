@@ -12,3 +12,6 @@ func fire(at: Entity) -> void:
 		effect.add_duration(linger_duration)
 	
 	at.add_child(effect)
+
+func manual_fire(at: Entity) -> void:
+	pass

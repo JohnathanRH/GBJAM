@@ -5,6 +5,7 @@ class_name GaugeTween
 var gauge_tween: Tween
 
 func _ready() -> void:
+	entity.damage_received.connect(reset_gauge)
 	entity.set_fill_speed.connect(set_fill_speed)
 	fill_gauge()
 

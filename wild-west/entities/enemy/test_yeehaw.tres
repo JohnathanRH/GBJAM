@@ -9,5 +9,6 @@ script = ExtResource("1_7hicu")
 intents = Array[PackedScene]([ExtResource("2_3egju")])
 hp = 10.0
 gauge_duration = 4.75
+safe_segment = 0.7
 gauge_icon = ExtResource("1_tih4o")
 metadata/_custom_type_script = "uid://dh7bfboklvbvo"

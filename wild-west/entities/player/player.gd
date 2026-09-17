@@ -2,7 +2,7 @@ extends Entity
 class_name Player
 
 @export var bullets: Array[BulletResource]
-@export var bullet_container: HBoxContainer
+@export var bullet_container: BulletsContainer
 
 var selected_bullet: BulletResource:
 	set = set_selected_bullet
@@ -16,10 +16,9 @@ signal bullet_selected
 	#selected_bullet = bullets[0]
 
 func fire_bullet() -> void:
-	pass
-	#for enemy in selected_targets:
-		#if selected_bullet and enemy.vulnerable:
-			#selected_bullet.fire(enemy)
+	for bullet_btn: BulletButton in bullet_container.get_children():
+		for target in selected_targets:
+			bullet_btn.bullet.fire(target)
 	
 
 func set_selected_bullet(bullet: BulletResource) -> void:

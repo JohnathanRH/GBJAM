@@ -14,6 +14,7 @@ var under_influence: Dictionary[String, LingeringBullet]
 var vulnerable: bool = false
 
 signal set_fill_speed(scale)
+signal damage_received
 
 func _init() -> void:
 	var tweener: GaugeTween = GaugeTween.new()
@@ -39,9 +40,12 @@ func mirror_entity_resource() -> void:
 	gauge_duration = entity_resource.gauge_duration
 	max_gauge = entity_resource.max_gauge
 
-func receive_damage(dam: float):
+func receive_damage(dam: float) -> void:
+	#print(dam)
 	if vulnerable:
+		#print(dam)
 		hp -= dam
+		damage_received.emit()
 		var label: FloatUpText =  float_text_scn.instantiate()
 		label.text = str(dam)
 		add_child(label)
