@@ -20,13 +20,21 @@ func _unhandled_input(event: InputEvent) -> void:
 		pointer += 1
 		player.selected_bullet = container.select(pointer)
 	
-	if event.is_action_pressed("A"):
+	if event.is_action_pressed("A") and container.get_child_count() != 0:
 		for enemy in player.selected_targets:
 			player.selected_bullet.manual_fire(enemy)
+		container.remove_child(container.selected_button)
+		pointer -= 1
+		if container.get_child_count() != 0:
+			player.selected_bullet = container.select(pointer)
 
 func set_pointer(value: int) -> void:
 	#print(pointer, " ", container.get_child_count(), " ", pointer >= container.get_child_count())
-	if value < 0 or value >= container.get_child_count():
-		print("Warning: Tried to set targeting pointer to an out of bounds value ("+str(pointer)+")")
+	if value < 0:
+		print("Warning: Tried to set targeting pointer to < 0 ("+str(pointer)+")")
+		pointer = 0
+	elif value >= container.get_child_count():
+		print("Warning: Tried to set targeting pointer to >= container cards count ("+str(pointer)+")")
+		pointer = container.get_child_count()-1
 	else:
 		pointer = value

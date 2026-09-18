@@ -18,5 +18,5 @@ func select(index: int) -> BulletResource:
 	
 	selected_button = get_child(index)
 	selected_button.selected()
-	#print(selected_button.bullet)
+	#print(selected_button)
 	return selected_button.bullet

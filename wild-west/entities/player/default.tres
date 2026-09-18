@@ -3,12 +3,13 @@
 [ext_resource type="Script" uid="uid://c0lodpuau3xw2" path="res://common/resources/bullet.gd" id="1_dep3k"]
 [ext_resource type="Resource" uid="uid://cl17as3rpqntr" path="res://props/bullets/damage_bullet/45magnum.tres" id="2_4rtdq"]
 [ext_resource type="Resource" uid="uid://cvjc7kff05eej" path="res://props/bullets/damage_bullet/9mm.tres" id="3_haitf"]
+[ext_resource type="Resource" uid="uid://dulgcwk5ykdbo" path="res://props/bullets/damage_bullet/22lr.tres" id="4_4rtdq"]
 [ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="4_c11tb"]
 [ext_resource type="Script" uid="uid://ccpfjmgwt8haq" path="res://common/resources/player_resource.gd" id="5_pss8w"]
 
 [resource]
 script = ExtResource("5_pss8w")
-bullets = Array[ExtResource("1_dep3k")]([ExtResource("2_4rtdq"), ExtResource("3_haitf")])
+bullets = Array[ExtResource("1_dep3k")]([ExtResource("3_haitf"), ExtResource("2_4rtdq"), ExtResource("2_4rtdq"), ExtResource("2_4rtdq"), ExtResource("4_4rtdq"), ExtResource("4_4rtdq")])
 hp = 10.0
 safe_segment = 0.7
 gauge_icon = ExtResource("4_c11tb")

@@ -41,7 +41,7 @@ func target_enemies() -> void:
 			else:
 				enemies[chooser].targeted.emit(true)
 				arr.push_back(enemies[chooser])
-	print(arr)
+	#print(arr)
 	player.selected_targets = arr
 
 func untarget_enemies() -> void:

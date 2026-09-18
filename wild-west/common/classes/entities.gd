@@ -22,7 +22,6 @@ func _init() -> void:
 	add_to_group("entities")
 
 func _ready() -> void:
-	print("AOIDISJFIOASJDFPIU")
 	mirror_entity_resource()
 	play()
 
