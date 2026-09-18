@@ -18,10 +18,12 @@ func fire_bullet() -> void:
 		current_intent.ChangeBehaviour.emit(current_intent, selected_intent.name)
 	else:
 		$BehaviourMan.start_with(selected_intent)
-	
+	select_random_bullet()
+
 func select_random_bullet() -> void:
 	var intents = $BehaviourMan.get_children()
 	selected_intent = intents.pick_random()
+	$IntentIcon.texture = selected_intent.icon
 
 func death() -> void:
 	pass

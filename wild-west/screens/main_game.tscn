@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
+[ext_resource type="PackedScene" uid="uid://b283ihsivierj" path="res://props/intents/slow/little.tscn" id="6_cuh3k"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
 [ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="8_pys20"]
 [ext_resource type="Texture2D" uid="uid://gm4ycwjyvw54" path="res://assets/TESTONLY/2DPCT_Walk.png" id="8_q5ngc"]
@@ -15,16 +16,16 @@
 script = ExtResource("10_auhgc")
 intents = Array[PackedScene]([ExtResource("9_q5ngc")])
 hp = 10.0
-gauge_duration = 8.0
+gauge_duration = 9.0
 safe_segment = 0.7
 gauge_icon = ExtResource("8_pys20")
 metadata/_custom_type_script = "uid://dh7bfboklvbvo"
 
 [sub_resource type="Resource" id="Resource_7ms6v"]
 script = ExtResource("10_auhgc")
-intents = Array[PackedScene]([ExtResource("9_q5ngc")])
+intents = Array[PackedScene]([ExtResource("9_q5ngc"), ExtResource("6_cuh3k")])
 hp = 10.0
-gauge_duration = 5.3
+gauge_duration = 8.5
 safe_segment = 0.7
 gauge_icon = ExtResource("8_pys20")
 metadata/_custom_type_script = "uid://dh7bfboklvbvo"
@@ -95,9 +96,8 @@ animations = [{
 
 [sub_resource type="Resource" id="Resource_pys20"]
 script = ExtResource("10_auhgc")
-intents = Array[PackedScene]([ExtResource("9_q5ngc")])
+intents = Array[PackedScene]([ExtResource("9_q5ngc"), ExtResource("6_cuh3k")])
 hp = 10.0
-gauge_duration = 6.0
 safe_segment = 0.7
 gauge_icon = ExtResource("8_pys20")
 metadata/_custom_type_script = "uid://dh7bfboklvbvo"

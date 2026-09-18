@@ -12,21 +12,23 @@ func _on_container_ready() -> void:
 	player.selected_bullet = container.select(0)
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pad_left"):
-		pointer -= 1
-		player.selected_bullet = container.select(pointer)
-	
-	if event.is_action_pressed("pad_right"):
-		pointer += 1
-		player.selected_bullet = container.select(pointer)
-	
-	if event.is_action_pressed("A") and container.get_child_count() != 0:
-		for enemy in player.selected_targets:
-			player.selected_bullet.manual_fire(enemy)
-		container.remove_child(container.selected_button)
-		pointer -= 1
-		if container.get_child_count() != 0:
+	if container.get_child_count() != 0:
+		if event.is_action_pressed("pad_left"):
+			pointer -= 1
 			player.selected_bullet = container.select(pointer)
+		
+		if event.is_action_pressed("pad_right"):
+			pointer += 1
+			player.selected_bullet = container.select(pointer)
+		
+		if event.is_action_pressed("A"):
+			for enemy in player.selected_targets:
+				player.selected_bullet.manual_fire(enemy)
+			container.discard_bullet(container.selected_button.bullet)
+			container.remove_child(container.selected_button)
+			pointer -= 1
+			if container.get_child_count() != 0:
+				player.selected_bullet = container.select(pointer)
 
 func set_pointer(value: int) -> void:
 	#print(pointer, " ", container.get_child_count(), " ", pointer >= container.get_child_count())

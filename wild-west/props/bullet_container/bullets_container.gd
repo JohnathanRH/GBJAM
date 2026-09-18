@@ -1,16 +1,18 @@
 extends HBoxContainer
 class_name BulletsContainer
 
-var button_scn = preload("res://props/bullet_button/bullet_button.tscn")
+@export var hand_count: int = 4
 @onready var player: Player = get_tree().get_first_node_in_group("player")
+
+var button_scn = preload("res://props/bullet_button/bullet_button.tscn")
 var selected_button: BulletButton
+var draw_pile: Array[BulletResource]
+var discard_pile: Array[BulletResource]
 
 func _ready() -> void:
-	for bullet in player.bullets:
-		var button: BulletButton = button_scn.instantiate()
-		button.bullet = bullet
-		button.set_icon(bullet.icon)
-		add_child(button)
+	draw_pile = player.bullets
+	player.damage_received.connect(draw_hand)
+	draw_hand()
 
 func select(index: int) -> BulletResource:
 	if selected_button:
@@ -20,3 +22,22 @@ func select(index: int) -> BulletResource:
 	selected_button.selected()
 	#print(selected_button)
 	return selected_button.bullet
+
+func draw_hand() -> void:
+	var amount = hand_count - get_child_count()
+	if draw_pile.size() <= hand_count:
+		draw_pile.append_array(discard_pile)
+		discard_pile.clear()
+	
+	for i in amount:
+		var button: BulletButton = button_scn.instantiate()
+		var random_i = randi_range(0, draw_pile.size()-1)
+		var bullet: BulletResource = draw_pile[random_i]
+		draw_pile.pop_at(random_i)
+		
+		button.bullet = bullet
+		button.set_icon(bullet.icon)
+		add_child(button)
+
+func discard_bullet(bullet: BulletResource):
+	discard_pile.push_back(bullet)

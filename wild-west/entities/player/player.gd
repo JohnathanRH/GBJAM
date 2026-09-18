@@ -15,6 +15,9 @@ func fire_bullet() -> void:
 	for bullet_btn: BulletButton in bullet_container.get_children():
 		for target in selected_targets:
 			bullet_btn.bullet.fire(target)
+		bullet_container.discard_bullet(bullet_btn.bullet)
+		bullet_container.remove_child(bullet_btn)
+	bullet_container.draw_hand()
 	
 
 func set_selected_bullet(bullet: BulletResource) -> void:

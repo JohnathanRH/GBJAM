@@ -80,6 +80,10 @@ position = Vector2(-20, 0)
 rotation = -1.5707964
 texture = ExtResource("3_3fvr7")
 
+[node name="IntentIcon" type="Sprite2D" parent="." unique_id=1155827860]
+position = Vector2(16, 0)
+texture = ExtResource("3_3fvr7")
+
 [node name="BehaviourMan" type="Node2D" parent="." unique_id=1968304472]
 script = ExtResource("4_dt443")
 metadata/_custom_type_script = "uid://barqiyliqhwqb"
