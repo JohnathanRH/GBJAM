@@ -6,7 +6,9 @@ var pointer: float = 0:
 	set = set_pointer
 
 func _ready() -> void:
-	#var button: BulletButton = container.get_child(0)
+	container.ready.connect(_on_container_ready)
+
+func _on_container_ready() -> void:
 	player.selected_bullet = container.select(0)
 
 func _unhandled_input(event: InputEvent) -> void:

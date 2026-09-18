@@ -1,7 +1,7 @@
 extends Entity
 class_name Player
 
-@export var bullets: Array[BulletResource]
+var bullets: Array[BulletResource]
 @export var bullet_container: BulletsContainer
 
 var selected_bullet: BulletResource:
@@ -10,10 +10,6 @@ var selected_targets: Array[Enemy]
 
 signal bullet_selected
 #signal target_selected
-
-#func _ready() -> void:
-	#super._ready()
-	#selected_bullet = bullets[0]
 
 func fire_bullet() -> void:
 	for bullet_btn: BulletButton in bullet_container.get_children():
@@ -30,3 +26,7 @@ func death() -> void:
 
 func manual_fire() -> void:
 	pass
+
+func mirror_entity_resource() -> void:
+	super.mirror_entity_resource()
+	bullets = entity_resource.bullets

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gm4ycwjyvw54" path="res://assets/TESTONLY/2DPCT_Walk.png" id="1_abrql"]
 [ext_resource type="Script" uid="uid://bd86081xkxcfn" path="res://entities/player/player.gd" id="2_abrql"]
-[ext_resource type="Resource" uid="uid://bp4b74uqyp4qa" path="res://entities/player/player.tres" id="3_sglur"]
+[ext_resource type="Resource" uid="uid://bp4b74uqyp4qa" path="res://entities/player/default.tres" id="3_sglur"]
 [ext_resource type="PackedScene" uid="uid://dltujqffb3gm4" path="res://entities/player/enemy_pick_control.tscn" id="4_bls4j"]
 [ext_resource type="PackedScene" uid="uid://bxxpunf4e5xt5" path="res://entities/player/bullet_pick_control.tscn" id="5_fkugw"]
 
