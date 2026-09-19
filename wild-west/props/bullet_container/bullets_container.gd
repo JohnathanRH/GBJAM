@@ -6,15 +6,16 @@ class_name BulletsContainer
 
 var button_scn = preload("res://props/bullet_button/bullet_button.tscn")
 var selected_button: BulletButton
-var draw_pile: Array[BulletResource]
-var discard_pile: Array[BulletResource]
+var draw_pile: Array[Bullet]
+var discard_pile: Array[Bullet]
 
 func _ready() -> void:
+	#player.ready.connect(_on_player_ready)
 	draw_pile = player.bullets
 	player.damage_received.connect(draw_hand)
 	draw_hand()
 
-func select(index: int) -> BulletResource:
+func select(index: int) -> Bullet:
 	if selected_button:
 		selected_button.unselected()
 	
@@ -30,14 +31,16 @@ func draw_hand() -> void:
 		discard_pile.clear()
 	
 	for i in amount:
+		if draw_pile.is_empty():
+			break
 		var button: BulletButton = button_scn.instantiate()
 		var random_i = randi_range(0, draw_pile.size()-1)
-		var bullet: BulletResource = draw_pile[random_i]
+		var bullet: Bullet = draw_pile[random_i]
 		draw_pile.pop_at(random_i)
 		
 		button.bullet = bullet
 		button.set_icon(bullet.icon)
 		add_child(button)
 
-func discard_bullet(bullet: BulletResource):
+func discard_bullet(bullet: Bullet):
 	discard_pile.push_back(bullet)

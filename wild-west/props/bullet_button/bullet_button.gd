@@ -5,7 +5,7 @@ class_name BulletButton
 @export var selected_texture: CompressedTexture2D
 
 
-var bullet: BulletResource
+var bullet: Bullet
 
 func selected() -> void:
 	texture = selected_texture

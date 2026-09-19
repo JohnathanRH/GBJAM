@@ -1,4 +1,4 @@
 extends EntityResource
 class_name PlayerResource
 
-@export var bullets: Array[BulletResource]
+@export var bullets: Array[PackedScene]

@@ -79,3 +79,5 @@ entity_resource = ExtResource("3_sglur")
 [node name="EnemyPickControl" parent="." unique_id=1905000433 instance=ExtResource("4_bls4j")]
 
 [node name="BulletPickControl" parent="." unique_id=1582646411 instance=ExtResource("5_fkugw")]
+
+[node name="Bullets" type="Node" parent="." unique_id=58880926]

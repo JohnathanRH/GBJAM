@@ -5,6 +5,7 @@ class_name Entity
 var float_text_scn = preload("res://common/float_up_text/float_up_text.tscn")
 
 @export var entity_resource: EntityResource
+var max_hp: float
 var hp: float
 var gauge_duration: float = 5.0
 var max_gauge: float = 5.0
@@ -37,7 +38,8 @@ func _physics_process(delta: float) -> void:
 @abstract func death() -> void
 
 func mirror_entity_resource() -> void:
-	hp = entity_resource.hp
+	max_hp = entity_resource.max_hp
+	hp = entity_resource.max_hp
 	gauge_duration = entity_resource.gauge_duration
 	max_gauge = entity_resource.max_gauge
 

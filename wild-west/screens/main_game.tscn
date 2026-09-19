@@ -2,105 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
-[ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
-[ext_resource type="PackedScene" uid="uid://b283ihsivierj" path="res://props/intents/slow/little.tscn" id="6_cuh3k"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
-[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="8_pys20"]
-[ext_resource type="Texture2D" uid="uid://gm4ycwjyvw54" path="res://assets/TESTONLY/2DPCT_Walk.png" id="8_q5ngc"]
-[ext_resource type="PackedScene" uid="uid://82xv5ya3eubr" path="res://props/intents/damage/light_damage.tscn" id="9_q5ngc"]
-[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="10_auhgc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
-
-[sub_resource type="Resource" id="Resource_q5ngc"]
-script = ExtResource("10_auhgc")
-intents = Array[PackedScene]([ExtResource("9_q5ngc")])
-hp = 10.0
-gauge_duration = 9.0
-safe_segment = 0.7
-gauge_icon = ExtResource("8_pys20")
-metadata/_custom_type_script = "uid://dh7bfboklvbvo"
-
-[sub_resource type="Resource" id="Resource_7ms6v"]
-script = ExtResource("10_auhgc")
-intents = Array[PackedScene]([ExtResource("9_q5ngc"), ExtResource("6_cuh3k")])
-hp = 10.0
-gauge_duration = 8.5
-safe_segment = 0.7
-gauge_icon = ExtResource("8_pys20")
-metadata/_custom_type_script = "uid://dh7bfboklvbvo"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wwj3"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d50e0"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_61ikd"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_721x4"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eaj7m"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(64, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8fs5"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(80, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7vrfk"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(96, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ohlc"]
-atlas = ExtResource("8_q5ngc")
-region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_auhgc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wwj3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d50e0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_61ikd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_721x4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eaj7m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a8fs5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7vrfk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4ohlc")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="Resource" id="Resource_pys20"]
-script = ExtResource("10_auhgc")
-intents = Array[PackedScene]([ExtResource("9_q5ngc"), ExtResource("6_cuh3k")])
-hp = 10.0
-safe_segment = 0.7
-gauge_icon = ExtResource("8_pys20")
-metadata/_custom_type_script = "uid://dh7bfboklvbvo"
 
 [node name="MainGame" type="Node2D" unique_id=808725349]
 
@@ -113,19 +17,6 @@ texture = SubResource("PlaceholderTexture2D_s1fef")
 [node name="GaugeBar" parent="." unique_id=850369798 instance=ExtResource("2_hs5nc")]
 position = Vector2(12, 101)
 duration = 5.0
-
-[node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
-position = Vector2(127.00001, 70)
-entity_resource = SubResource("Resource_q5ngc")
-
-[node name="Enemy2" parent="." unique_id=787607369 instance=ExtResource("2_phyky")]
-position = Vector2(127.00001, 53)
-entity_resource = SubResource("Resource_7ms6v")
-
-[node name="Enemy3" parent="." unique_id=362441325 instance=ExtResource("2_phyky")]
-position = Vector2(127.00001, 35)
-sprite_frames = SubResource("SpriteFrames_auhgc")
-entity_resource = SubResource("Resource_pys20")
 
 [node name="Player" parent="." unique_id=1634526488 node_paths=PackedStringArray("bullet_container") instance=ExtResource("1_hs5nc")]
 position = Vector2(27.000008, 69.000015)

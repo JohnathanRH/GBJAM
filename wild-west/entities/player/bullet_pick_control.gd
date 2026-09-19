@@ -26,12 +26,13 @@ func _unhandled_input(event: InputEvent) -> void:
 			player.selected_bullet = container.select(pointer)
 		
 		if event.is_action_pressed("A"):
-			for enemy in player.selected_targets:
-				var bullet = player.selected_bullet
-				if bullet.manual_target_self:
-					player.selected_bullet.manual_fire(player)
-				else:
-					player.selected_bullet.manual_fire(enemy)
+			var bullet: Bullet = player.selected_bullet
+			if bullet.manual_target_self:
+				bullet.manual_fire(player)
+			else:
+				for enemy in player.selected_targets:
+					bullet.manual_fire(enemy)
+				
 			container.discard_bullet(container.selected_button.bullet)
 			container.remove_child(container.selected_button)
 			pointer -= 1

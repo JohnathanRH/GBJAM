@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cuaul7vq5wh00"]
+
+[ext_resource type="Script" uid="uid://cy2vldw05p2ph" path="res://props/bullets/desperado/desperado_bullet.gd" id="1_2iebm"]
+[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="2_xthro"]
+
+[node name="Regular" type="Node" unique_id=294648765]
+script = ExtResource("1_2iebm")
+damage = 2.0
+icon = ExtResource("2_xthro")
+manual_target_self = true
+metadata/_custom_type_script = "uid://cy2vldw05p2ph"
