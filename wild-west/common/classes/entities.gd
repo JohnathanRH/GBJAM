@@ -13,13 +13,14 @@ var max_gauge: float = 5.0
 var gauge_filled: float = 0.0
 var under_influence: Dictionary[String, LingeringBullet]
 var vulnerable: bool = false
+var tweener: GaugeTween
 
 signal set_fill_speed(scale)
 signal damage_received
 signal dead(entity: Entity)
 
 func _init() -> void:
-	var tweener: GaugeTween = GaugeTween.new()
+	tweener = GaugeTween.new()
 	add_child(tweener)
 	add_to_group("entities")
 
@@ -55,3 +56,9 @@ func receive_damage(dam: float) -> void:
 	if hp <= 0:
 		dead.emit(self)
 		death()
+
+func rewind_gauge(gauge_value: float)  -> void:
+	tweener.rewind_gauge(gauge_value)
+
+func reset_gauge() -> void:
+	tweener.reset_gauge()

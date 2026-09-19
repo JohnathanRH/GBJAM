@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="DamageBullet" format=3 uid="uid://dulgcwk5ykdbo"]
 
-[ext_resource type="PackedScene" uid="uid://dn326kr01lrv2" path="res://props/bullets/slow_gauge/slow_gauge_scene.tscn" id="1_4a432"]
+[ext_resource type="PackedScene" uid="uid://dn326kr01lrv2" path="res://props/status_effects/slow_gauge/slow_gauge_scene.tscn" id="1_4a432"]
 [ext_resource type="Script" uid="uid://11p4xq0oh645" path="res://props/bullets/damage_bullet/damage_bullet.gd" id="1_isspl"]
 [ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="2_vkpnl"]
 

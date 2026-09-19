@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://on5tcm7rsbvl"]
+
+[ext_resource type="Script" uid="uid://y3bqn4o3udey" path="res://props/bullets/steady_aim/steady_aim.gd" id="1_j6suk"]
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="2_atybc"]
+
+[node name="SteadyAimRegular" type="Node" unique_id=493266533]
+script = ExtResource("1_j6suk")
+icon = ExtResource("2_atybc")
+metadata/_custom_type_script = "uid://y3bqn4o3udey"

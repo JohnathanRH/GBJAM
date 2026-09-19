@@ -13,5 +13,4 @@ func fire(at: Entity) -> void:
 	at.receive_damage(clean_damage)
 
 func manual_fire(at: Entity) -> void:
-	print("Healing player")
 	player.hp += heal

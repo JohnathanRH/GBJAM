@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
+[ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
+[ext_resource type="Resource" uid="uid://v5wm3ypwcgt" path="res://entities/enemy/test_yeehaw.tres" id="5_f56do"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
@@ -29,3 +31,7 @@ offset_right = 152.0
 offset_bottom = 136.0
 theme_override_constants/separation = 10
 alignment = 1
+
+[node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
+position = Vector2(133, 67)
+entity_resource = ExtResource("5_f56do")
