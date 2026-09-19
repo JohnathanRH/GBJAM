@@ -15,6 +15,7 @@ var vulnerable: bool = false
 
 signal set_fill_speed(scale)
 signal damage_received
+signal dead(entity: Entity)
 
 func _init() -> void:
 	var tweener: GaugeTween = GaugeTween.new()
@@ -49,3 +50,6 @@ func receive_damage(dam: float) -> void:
 		var label: FloatUpText =  float_text_scn.instantiate()
 		label.text = str(dam)
 		add_child(label)
+	if hp <= 0:
+		dead.emit(self)
+		death()

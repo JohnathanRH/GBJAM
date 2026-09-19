@@ -8,6 +8,8 @@ extends Node
 func _ready() -> void:
 	player.bullet_selected.connect(target_enemies)
 	enemies.assign(get_tree().get_nodes_in_group("enemies"))
+	for enemy in enemies:
+		enemy.dead.connect(_on_enemy_death)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pad_up"):
@@ -23,10 +25,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func target_enemies() -> void:
 	untarget_enemies()
+	enemies.assign(get_tree().get_nodes_in_group("enemies"))
 	var amount = player.selected_bullet.target_amount
 	var arr: Array[Enemy]
 	for i in amount:
 		#print("A")
+		if enemies.is_empty():
+			break
 		if i == 0:
 			enemies[pointer].targeted.emit(true)
 			arr.push_back(enemies[pointer])
@@ -47,10 +52,16 @@ func target_enemies() -> void:
 func untarget_enemies() -> void:
 	#print(player.selected_targets)
 	for enemy in player.selected_targets:
-		enemy.targeted.emit(false)
+		if is_instance_valid(enemy):
+			enemy.targeted.emit(false)
+		else:
+			player.selected_targets.erase(enemy)
 
 func set_pointer(value: int) -> void:
 	if value < 0 or value >= enemies.size():
 		print("Warning: Tried to set targeting pointer to an out of bounds value")
 	else:
 		pointer = value
+
+func _on_enemy_death(entity: Entity) -> void:
+	pointer = 0

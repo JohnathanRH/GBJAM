@@ -11,6 +11,7 @@ var safe_segment: float
 @onready var x_difference = end_position.x - start_position.x
 
 func _ready() -> void:
+	entity.dead.connect(_on_entity_death)
 	if !entity.entity_resource.gauge_icon:
 		print("WARNING: No gauge icon detected in "+ entity.name +" resource")
 	texture = entity.entity_resource.gauge_icon
@@ -33,3 +34,6 @@ func _on_entity_targeted(status: bool) -> void:
 		scale += Vector2(0.25, 0.25)
 	else:
 		scale -= Vector2(0.25, 0.25)
+
+func _on_entity_death(entity: Entity):
+	queue_free()

@@ -9,15 +9,18 @@ var selected_bullet: BulletResource:
 var selected_targets: Array[Enemy]
 
 signal bullet_selected
+signal auto_fired
 #signal target_selected
 
 func fire_bullet() -> void:
 	for bullet_btn: BulletButton in bullet_container.get_children():
+		selected_bullet = bullet_btn.bullet
 		for target in selected_targets:
-			bullet_btn.bullet.fire(target)
+			selected_bullet.fire(target)
 		bullet_container.discard_bullet(bullet_btn.bullet)
 		bullet_container.remove_child(bullet_btn)
 	bullet_container.draw_hand()
+	auto_fired.emit()
 	
 
 func set_selected_bullet(bullet: BulletResource) -> void:

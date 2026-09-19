@@ -26,7 +26,7 @@ func select_random_bullet() -> void:
 	$IntentIcon.texture = selected_intent.icon
 
 func death() -> void:
-	pass
+	queue_free()
 
 func toggle_targeted_icon(targeted: bool) -> void:
 	$TargetedIcon.visible = targeted

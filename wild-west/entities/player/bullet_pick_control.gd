@@ -6,10 +6,14 @@ var pointer: float = 0:
 	set = set_pointer
 
 func _ready() -> void:
+	player.auto_fired.connect(_on_player_auto_fired)
 	container.ready.connect(_on_container_ready)
 
 func _on_container_ready() -> void:
 	player.selected_bullet = container.select(0)
+
+func _on_player_auto_fired() -> void:
+	player.selected_bullet = container.select(pointer)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if container.get_child_count() != 0:
@@ -23,7 +27,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		if event.is_action_pressed("A"):
 			for enemy in player.selected_targets:
-				player.selected_bullet.manual_fire(enemy)
+				var bullet = player.selected_bullet
+				if bullet.manual_target_self:
+					player.selected_bullet.manual_fire(player)
+				else:
+					player.selected_bullet.manual_fire(enemy)
 			container.discard_bullet(container.selected_button.bullet)
 			container.remove_child(container.selected_button)
 			pointer -= 1
