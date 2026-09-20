@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_7hicu"]
 [ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="1_tih4o"]
 [ext_resource type="PackedScene" uid="uid://dflajau3iu10t" path="res://props/intents/block/block_intent.tscn" id="3_3egju"]
+[ext_resource type="PackedScene" uid="uid://82xv5ya3eubr" path="res://props/intents/damage/light_damage.tscn" id="3_l6x8f"]
 
 [resource]
 script = ExtResource("1_7hicu")
-intents = Array[PackedScene]([ExtResource("3_3egju")])
+intents = Array[PackedScene]([ExtResource("3_3egju"), ExtResource("3_l6x8f")])
 gauge_duration = 6.5
 safe_segment = 0.7
 gauge_icon = ExtResource("1_tih4o")

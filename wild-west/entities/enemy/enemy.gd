@@ -21,8 +21,13 @@ func fire_bullet() -> void:
 	select_random_bullet()
 
 func select_random_bullet() -> void:
-	var intents = $BehaviourMan.get_children()
-	selected_intent = intents.pick_random()
+	var pool = $BehaviourMan.get_children().duplicate()
+	if pool.size() > 1:
+		for i in pool.size():
+			if pool[i] == selected_intent:
+				pool.pop_at(i)
+				break
+	selected_intent = pool.pick_random()
 	$IntentIcon.texture = selected_intent.icon
 
 func death() -> void:
