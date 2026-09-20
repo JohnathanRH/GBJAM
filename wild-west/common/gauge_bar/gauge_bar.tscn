@@ -2,17 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bgeaa4185cpc1" path="res://common/gauge_bar/gauge_bar.gd" id="1_1tfom"]
 [ext_resource type="Shader" uid="uid://cocet4xo3jboo" path="res://common/gauge_bar/gauge_bar.gdshader" id="2_1qbl0"]
-[ext_resource type="Texture2D" uid="uid://b5dmhc487ex0" path="res://assets/TESTONLY/atb_gauge_test.png" id="2_08gtx"]
+[ext_resource type="Texture2D" uid="uid://lsgo25vqvp4w" path="res://common/gauge_bar/gauge_bar.png" id="3_1qbl0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s1fef"]
 shader = ExtResource("2_1qbl0")
 shader_parameter/threshold = 0.7
-shader_parameter/tint_color = Color(1, 0, 0, 1)
+shader_parameter/tint_color = Color(1, 0.26000598, 0.2008352, 1)
 
 [node name="GaugeBar" type="Node2D" unique_id=1877537307]
 script = ExtResource("1_1tfom")
 
 [node name="Bar" type="Sprite2D" parent="." unique_id=1712969290]
 material = SubResource("ShaderMaterial_s1fef")
-position = Vector2(70, 3)
-texture = ExtResource("2_08gtx")
+position = Vector2(72, 2)
+texture = ExtResource("3_1qbl0")

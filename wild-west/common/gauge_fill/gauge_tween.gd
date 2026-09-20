@@ -4,6 +4,8 @@ class_name GaugeTween
 @onready var entity: Entity = get_parent()
 var gauge_tween: Tween
 
+signal cycle_finished
+
 func _ready() -> void:
 	entity.damage_received.connect(reset_gauge)
 	entity.set_fill_speed.connect(set_fill_speed)
@@ -19,8 +21,6 @@ func fill_gauge() -> void:
 func rewind_gauge(value: float) -> void:
 	var duration: float = entity.entity_resource.gauge_duration
 	var remaining_time: float = duration - gauge_tween.get_total_elapsed_time()
-	if entity is Enemy:
-		print(remaining_time)
 	if gauge_tween:
 		gauge_tween.kill()
 	
@@ -43,6 +43,10 @@ func create_gauge_tweener(duration: float) -> Tween:
 	var tween = create_tween()
 	tween.finished.connect(reset_gauge)
 	tween.finished.connect(entity.fire_bullet)
+	tween.finished.connect(_on_tween_finished)
 	tween.tween_property(entity, "gauge_filled", max_gauge, duration)
 	tween.set_trans(Tween.TRANS_LINEAR)
 	return tween
+
+func _on_tween_finished() -> void:
+	cycle_finished.emit()

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bq48c5revweo3"]
+
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="1_0x6di"]
+[ext_resource type="Script" uid="uid://h84iu50cldfa" path="res://props/status_effects/heal_over_cycle/heal_over_cycle.gd" id="1_2kofd"]
+
+[node name="HocRegular" type="TextureRect" unique_id=2019902002]
+texture = ExtResource("1_0x6di")
+script = ExtResource("1_2kofd")
+metadata/_custom_type_script = "uid://h84iu50cldfa"

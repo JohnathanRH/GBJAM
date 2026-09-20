@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://by6crvnnen0rj"]
+
+[ext_resource type="Script" uid="uid://dvl7txwfa6e44" path="res://props/bullets/short_fuse/short_fuse_bullet.gd" id="1_mbp6d"]
+
+[node name="ShortFuseBullet" type="Node" unique_id=291340440]
+script = ExtResource("1_mbp6d")
+manual_target_self = true
+metadata/_custom_type_script = "uid://dvl7txwfa6e44"

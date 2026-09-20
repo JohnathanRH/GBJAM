@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d4n2hptg7q421"]
+
+[ext_resource type="Script" uid="uid://danhwpm2tktt8" path="res://props/status_effects/damage_over_cycle/damage_over_cycle.gd" id="1_avu2h"]
+[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="1_qk2wj"]
+
+[node name="DocRegular" type="TextureRect" unique_id=1195240823]
+texture = ExtResource("1_qk2wj")
+script = ExtResource("1_avu2h")
+metadata/_custom_type_script = "uid://danhwpm2tktt8"
