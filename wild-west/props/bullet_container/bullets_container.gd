@@ -25,6 +25,10 @@ func select(index: int) -> Bullet:
 	return selected_button.bullet
 
 func draw_hand() -> void:
+	#if total_redraw:
+		#for child in get_children():
+			#discard_bullet(child.bullet)
+			#remove_child(child)
 	var amount = hand_count - get_child_count()
 	if draw_pile.size() <= hand_count:
 		draw_pile.append_array(discard_pile)

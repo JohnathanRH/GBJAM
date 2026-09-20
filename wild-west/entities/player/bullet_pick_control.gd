@@ -31,8 +31,9 @@ func _unhandled_input(event: InputEvent) -> void:
 				bullet.manual_fire(player)
 			else:
 				for enemy in player.selected_targets:
-					bullet.manual_fire(enemy)
-				
+					if is_instance_valid(enemy):
+						bullet.manual_fire(enemy)
+			
 			container.discard_bullet(container.selected_button.bullet)
 			container.remove_child(container.selected_button)
 			pointer -= 1

@@ -37,10 +37,6 @@ func target_enemies() -> void:
 		else:
 			var chooser
 			chooser = pointer + i
-			#if i % 2 == 0:
-				#chooser = pointer + i
-			#else:
-				#chooser = pointer - i
 			if chooser < 0 or chooser >= enemies.size():
 				continue
 			else:

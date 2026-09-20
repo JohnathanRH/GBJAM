@@ -5,11 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="3_dep3k"]
 [ext_resource type="PackedScene" uid="uid://86qyn4h1rpk5" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_4rtdq"]
 [ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="4_c11tb"]
+[ext_resource type="PackedScene" uid="uid://c0id0ggnlo1jc" path="res://props/bullets/sawed_off/sawed_off_regular.tscn" id="5_haitf"]
 [ext_resource type="Script" uid="uid://ccpfjmgwt8haq" path="res://common/resources/player_resource.gd" id="5_pss8w"]
+[ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="6_c11tb"]
 
 [resource]
 script = ExtResource("5_pss8w")
-bullets = Array[PackedScene]([ExtResource("1_f25xh"), ExtResource("2_g2swm"), ExtResource("3_dep3k"), ExtResource("4_4rtdq")])
+bullets = Array[PackedScene]([ExtResource("1_f25xh"), ExtResource("2_g2swm"), ExtResource("3_dep3k"), ExtResource("4_4rtdq"), ExtResource("5_haitf"), ExtResource("6_c11tb")])
 gauge_duration = 6.0
 safe_segment = 0.7
 gauge_icon = ExtResource("4_c11tb")
