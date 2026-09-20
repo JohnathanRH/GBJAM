@@ -1,7 +1,7 @@
-extends Node
+extends TextureRect
 class_name StatusEffect
 
-@onready var entity: Entity = get_parent()
+@onready var entity: Entity = $"../../"
 var potency: Variant
 
 func _ready() -> void:
@@ -15,4 +15,5 @@ func reverse_effect() -> void:
 func add_duration(duration: float) -> void:
 	var timer = LingerTimer.new(duration)
 	timer.timeout.connect(reverse_effect)
+	timer.timeout.connect(queue_free)
 	add_child(timer)

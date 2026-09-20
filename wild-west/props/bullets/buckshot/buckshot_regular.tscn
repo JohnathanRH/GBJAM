@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://86qyn4h1rpk5"]
+
+[ext_resource type="Script" uid="uid://dbla2oo70yh8b" path="res://props/bullets/buckshot/buckshot_bullet.gd" id="1_atbcd"]
+[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="2_dy1ey"]
+
+[node name="BuckshotRegular" type="Node" unique_id=986703346]
+script = ExtResource("1_atbcd")
+icon = ExtResource("2_dy1ey")
+target_amount = 3
+metadata/_custom_type_script = "uid://dbla2oo70yh8b"

@@ -29,7 +29,6 @@ func target_enemies() -> void:
 	var amount = player.selected_bullet.target_amount
 	var arr: Array[Enemy]
 	for i in amount:
-		#print("A")
 		if enemies.is_empty():
 			break
 		if i == 0:
@@ -37,11 +36,12 @@ func target_enemies() -> void:
 			arr.push_back(enemies[pointer])
 		else:
 			var chooser
-			if i % 2 == 0:
-				chooser = pointer + i
-			else:
-				chooser = pointer - i
-			if chooser < 0 or chooser > enemies.size():
+			chooser = pointer + i
+			#if i % 2 == 0:
+				#chooser = pointer + i
+			#else:
+				#chooser = pointer - i
+			if chooser < 0 or chooser >= enemies.size():
 				continue
 			else:
 				enemies[chooser].targeted.emit(true)

@@ -6,14 +6,17 @@ var float_text_scn = preload("res://common/float_up_text/float_up_text.tscn")
 
 @export var entity_resource: EntityResource
 var max_hp: float
-var hp: float
+var hp: float:
+	set = set_hp
 var gauge_duration: float = 5.0
 var max_gauge: float = 5.0
+var has_shield: bool
 
 var gauge_filled: float = 0.0
 var under_influence: Dictionary[String, LingeringBullet]
 var vulnerable: bool = false
 var tweener: GaugeTween
+var status_container: StatusContainer
 
 signal set_fill_speed(scale)
 signal damage_received
@@ -21,7 +24,9 @@ signal dead(entity: Entity)
 
 func _init() -> void:
 	tweener = GaugeTween.new()
+	status_container = StatusContainer.new()
 	add_child(tweener)
+	add_child(status_container)
 	add_to_group("entities")
 
 func _ready() -> void:
@@ -45,14 +50,19 @@ func mirror_entity_resource() -> void:
 	max_gauge = entity_resource.max_gauge
 
 func receive_damage(dam: float) -> void:
-	#print(dam)
-	if vulnerable:
-		#print(dam)
+	if vulnerable and !has_shield:
 		hp -= dam
 		damage_received.emit()
-		var label: FloatUpText =  float_text_scn.instantiate()
-		label.text = str(dam)
-		add_child(label)
+		spawn_text(str(dam))
+
+func receive_piercing_damage(dam: float) -> void:
+	if vulnerable:
+		hp -= dam
+		damage_received.emit()
+		spawn_text(str(dam))
+
+func set_hp(value: float) -> void:
+	hp = value
 	if hp <= 0:
 		dead.emit(self)
 		death()
@@ -62,3 +72,11 @@ func rewind_gauge(gauge_value: float)  -> void:
 
 func reset_gauge() -> void:
 	tweener.reset_gauge()
+
+func receive_status(status: StatusEffect) -> void:
+	status_container.add_child(status)
+
+func spawn_text(str: String) -> void:
+	var label: FloatUpText = float_text_scn.instantiate()
+	label.text = str
+	add_child(label)

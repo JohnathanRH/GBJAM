@@ -17,4 +17,4 @@ func manual_fire(at: Entity) -> void:
 	var slow: StatusEffect = slow_effect.instantiate()
 	slow.potency = 0.3
 	slow.add_duration(2.0)
-	at.add_child(slow)
+	at.receive_status(slow)

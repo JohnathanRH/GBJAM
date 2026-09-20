@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://du80hlkcejywe"]
+
+[ext_resource type="Script" uid="uid://dv1ct4be5r625" path="res://props/status_effects/shielded/shielded_status.gd" id="1_ubxa2"]
+[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="2_vg1vn"]
+
+[node name="ShieldedStatusRegular" type="TextureRect" unique_id=598990162]
+texture = ExtResource("2_vg1vn")
+script = ExtResource("1_ubxa2")

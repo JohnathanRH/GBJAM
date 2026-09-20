@@ -2,12 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_f25xh"]
 [ext_resource type="PackedScene" uid="uid://on5tcm7rsbvl" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_g2swm"]
+[ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="3_dep3k"]
+[ext_resource type="PackedScene" uid="uid://86qyn4h1rpk5" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_4rtdq"]
 [ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="4_c11tb"]
 [ext_resource type="Script" uid="uid://ccpfjmgwt8haq" path="res://common/resources/player_resource.gd" id="5_pss8w"]
 
 [resource]
 script = ExtResource("5_pss8w")
-bullets = Array[PackedScene]([ExtResource("1_f25xh"), ExtResource("2_g2swm")])
+bullets = Array[PackedScene]([ExtResource("1_f25xh"), ExtResource("2_g2swm"), ExtResource("3_dep3k"), ExtResource("4_4rtdq")])
 gauge_duration = 6.0
 safe_segment = 0.7
 gauge_icon = ExtResource("4_c11tb")

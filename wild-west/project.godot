@@ -36,6 +36,10 @@ player=""
 enemies=""
 bullets_container=""
 
+[gui]
+
+theme/custom_font="uid://dsth671jeyku2"
+
 [input]
 
 pad_left={

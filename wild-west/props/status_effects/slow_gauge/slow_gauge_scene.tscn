@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dn326kr01lrv2"]
 
 [ext_resource type="Script" uid="uid://drw6cl7bna8uj" path="res://props/status_effects/slow_gauge/slow_gauge_scene.gd" id="1_6h5n1"]
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="2_mf4k4"]
 
-[node name="SlowGaugeScene" type="Node" unique_id=2071422128]
+[node name="SlowGaugeScene" type="TextureRect" unique_id=630291921]
+physics_interpolation_mode = 0
+texture = ExtResource("2_mf4k4")
 script = ExtResource("1_6h5n1")
-metadata/_custom_type_script = "uid://cxb2lxxn5mvk3"

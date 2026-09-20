@@ -4,9 +4,28 @@
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
 [ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
 [ext_resource type="Resource" uid="uid://v5wm3ypwcgt" path="res://entities/enemy/test_yeehaw.tres" id="5_f56do"]
+[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="6_bq5v2"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
+[ext_resource type="PackedScene" uid="uid://dflajau3iu10t" path="res://props/intents/block/block_intent.tscn" id="7_cuh3k"]
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="8_c6ykn"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
+
+[sub_resource type="Resource" id="Resource_pys20"]
+script = ExtResource("8_c6ykn")
+intents = Array[PackedScene]([ExtResource("7_cuh3k")])
+gauge_duration = 7.0
+safe_segment = 0.7
+gauge_icon = ExtResource("6_bq5v2")
+metadata/_custom_type_script = "uid://dh7bfboklvbvo"
+
+[sub_resource type="Resource" id="Resource_q5ngc"]
+script = ExtResource("8_c6ykn")
+intents = Array[PackedScene]([ExtResource("7_cuh3k")])
+gauge_duration = 7.5
+safe_segment = 0.7
+gauge_icon = ExtResource("6_bq5v2")
+metadata/_custom_type_script = "uid://dh7bfboklvbvo"
 
 [node name="MainGame" type="Node2D" unique_id=808725349]
 
@@ -33,5 +52,13 @@ theme_override_constants/separation = 10
 alignment = 1
 
 [node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
-position = Vector2(133, 67)
+position = Vector2(133, 76)
 entity_resource = ExtResource("5_f56do")
+
+[node name="Enemy2" parent="." unique_id=1735802820 instance=ExtResource("2_phyky")]
+position = Vector2(133, 57)
+entity_resource = SubResource("Resource_pys20")
+
+[node name="Enemy3" parent="." unique_id=395739288 instance=ExtResource("2_phyky")]
+position = Vector2(133, 38)
+entity_resource = SubResource("Resource_q5ngc")

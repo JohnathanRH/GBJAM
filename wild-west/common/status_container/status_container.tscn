@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dr16ikcebexyb"]
+
+[ext_resource type="Script" uid="uid://bn3ehrav3t01o" path="res://common/status_container/status_container.gd" id="1_pshn7"]
+
+[node name="StatusContainer" type="HBoxContainer" unique_id=995683824]
+offset_left = -48.0
+offset_top = -54.0
+offset_right = 48.0
+offset_bottom = -38.0
+theme_override_constants/separation = 0
+alignment = 1
+script = ExtResource("1_pshn7")

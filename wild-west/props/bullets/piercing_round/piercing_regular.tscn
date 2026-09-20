@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvnt4mur5gvc2"]
+
+[ext_resource type="Script" uid="uid://dc2dg8ggy5ldq" path="res://props/bullets/piercing_round/piercing_bullet.gd" id="1_xcg40"]
+[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="2_d4do5"]
+
+[node name="PiercingRegular" type="Node" unique_id=1139430393]
+script = ExtResource("1_xcg40")
+damage = 1.0
+icon = ExtResource("2_d4do5")
+metadata/_custom_type_script = "uid://dc2dg8ggy5ldq"
