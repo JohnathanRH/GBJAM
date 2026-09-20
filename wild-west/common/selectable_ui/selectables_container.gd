@@ -8,7 +8,7 @@ var h_pointer: int = 0:
 	set = set_h_pointer
 
 var selected_ui: Control
-signal ui_selected(selectable: SelectableButton)
+signal ui_selected(selectable: Control)
 
 
 func _ready() -> void:

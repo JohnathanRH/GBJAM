@@ -1,10 +1,13 @@
 extends Node
 class_name Bullet
 
+@export var bullet_name: String
 @export var icon: CompressedTexture2D
-#@export var potency: Variant
 @export var target_amount: int = 1
 @export var manual_target_self: bool = false
+
+@export_multiline var auto_description: String
+@export_multiline var manual_description: String
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 

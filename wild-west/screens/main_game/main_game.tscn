@@ -4,21 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
 [ext_resource type="Script" uid="uid://bwbixgojfrj8q" path="res://common/tween_animations/float_up/float_up.gd" id="2_52jb1"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
+[ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="2_xpwsd"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
 
 [node name="MainGame" type="Node2D" unique_id=808725349]
 script = ExtResource("1_dyq00")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1386097473]
-self_modulate = Color(0.6488867, 0.59059304, 1, 1)
-position = Vector2(80.75, 73.75)
-scale = Vector2(162.5, 148.5)
-texture = SubResource("PlaceholderTexture2D_s1fef")
+position = Vector2(79.375, 69.00001)
+scale = Vector2(1.0171875, 1.1111112)
+texture = ExtResource("2_xpwsd")
 
 [node name="GaugeBar" parent="." unique_id=850369798 instance=ExtResource("2_hs5nc")]
-position = Vector2(12, 150)
+position = Vector2(12, 147)
 duration = 5.0
 
 [node name="Player" parent="." unique_id=1634526488 node_paths=PackedStringArray("bullet_container") instance=ExtResource("1_hs5nc")]
@@ -28,26 +26,26 @@ entity_resource = null
 
 [node name="BulletsContainer" parent="." unique_id=1487478112 instance=ExtResource("7_bq5v2")]
 offset_left = 12.0
-offset_top = 161.0
+offset_top = 154.0
 offset_right = 152.0
-offset_bottom = 185.0
+offset_bottom = 178.0
 theme_override_constants/separation = 10
 alignment = 1
 
 [node name="EnemyPositions" type="Node2D" parent="." unique_id=280840777]
 
 [node name="Marker2D" type="Marker2D" parent="EnemyPositions" unique_id=453787749]
-position = Vector2(125, 74)
+position = Vector2(125, 82)
 
 [node name="Marker2D2" type="Marker2D" parent="EnemyPositions" unique_id=1832931186]
-position = Vector2(125, 47)
+position = Vector2(92, 48)
 
 [node name="Marker2D3" type="Marker2D" parent="EnemyPositions" unique_id=456545379]
 position = Vector2(125, 18)
 
 [node name="FloatUpAnimation" type="Node" parent="." unique_id=372753244 node_paths=PackedStringArray("node")]
 script = ExtResource("2_52jb1")
-distance = 49.0
+distance = 39.0
 duration = 0.8
 finish_signal_delay = 0.0
 auto_play = true
@@ -56,7 +54,7 @@ metadata/_custom_type_script = "uid://bwbixgojfrj8q"
 
 [node name="FloatUpAnimation2" type="Node" parent="." unique_id=711910307 node_paths=PackedStringArray("node")]
 script = ExtResource("2_52jb1")
-distance = 49.0
+distance = 39.0
 duration = 0.8
 finish_signal_delay = 0.0
 auto_play = true

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bg7u8bfxkobu8"]
 
 [ext_resource type="Script" uid="uid://bc2gsu0pr3s4n" path="res://props/bullets/warning_shot/warning_shot_bullet.gd" id="1_a63qe"]
-[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="2_yuhtw"]
+[ext_resource type="Texture2D" uid="uid://d2ak7pgx2ym65" path="res://assets/TESTONLY/warning_shot.png" id="2_yuhtw"]
 
 [node name="WarningShotRegular" type="Node" unique_id=483457939]
 script = ExtResource("1_a63qe")

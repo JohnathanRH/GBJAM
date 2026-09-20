@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://on5tcm7rsbvl"]
 
 [ext_resource type="Script" uid="uid://y3bqn4o3udey" path="res://props/bullets/steady_aim/steady_aim.gd" id="1_j6suk"]
-[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="2_atybc"]
+[ext_resource type="Texture2D" uid="uid://c4i7wkdevburc" path="res://assets/TESTONLY/steady_aim.png" id="2_atybc"]
 
 [node name="SteadyAimRegular" type="Node" unique_id=493266533]
 script = ExtResource("1_j6suk")

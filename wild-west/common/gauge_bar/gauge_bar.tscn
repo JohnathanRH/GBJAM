@@ -7,7 +7,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s1fef"]
 shader = ExtResource("2_1qbl0")
 shader_parameter/threshold = 0.7
-shader_parameter/tint_color = Color(1, 0.26000598, 0.2008352, 1)
+shader_parameter/tint_color = Color(0.6392157, 0.34117648, 0.30588236, 1)
 
 [node name="GaugeBar" type="Node2D" unique_id=1877537307]
 script = ExtResource("1_1tfom")

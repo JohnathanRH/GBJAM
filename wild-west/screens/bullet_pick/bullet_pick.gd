@@ -40,6 +40,8 @@ func set_loot_pointer(value: int) -> void:
 	var button: SelectableBullet = $LootContainer.get_child(loot_pointer)
 	button.selected()
 
+#func _on_selectables_selector_moved(ui_)
+
 func _on_bullet_selected() -> void:
 	var selected_btn: SelectableBullet = $SelectablesContainer.selected_ui
 	var loot_btn: SelectableBullet = $LootContainer.get_child(loot_pointer)

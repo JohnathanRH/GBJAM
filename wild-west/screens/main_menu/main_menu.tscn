@@ -2,12 +2,17 @@
 
 [ext_resource type="Script" uid="uid://bc6dbhc2e7m06" path="res://screens/main_menu/main_menu.gd" id="1_5k2jx"]
 [ext_resource type="PackedScene" uid="uid://ci813vfj6kiua" path="res://common/selectable_ui/selectables_container.tscn" id="2_hwsdy"]
+[ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="2_tldqp"]
 [ext_resource type="PackedScene" uid="uid://thg1a0c1i78c" path="res://common/selectable_ui/selectable_button.tscn" id="3_ay84d"]
 [ext_resource type="Texture2D" uid="uid://dm6lh7awl1287" path="res://assets/TESTONLY/CardFront.png" id="4_ux20d"]
 [ext_resource type="Texture2D" uid="uid://bd1vs87lppvxo" path="res://assets/TESTONLY/CardFrontSpecial.png" id="5_tldqp"]
 
 [node name="MainMenu" type="Node2D" unique_id=79016080]
 script = ExtResource("1_5k2jx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1749732400]
+position = Vector2(80, 72)
+texture = ExtResource("2_tldqp")
 
 [node name="Label" type="Label" parent="." unique_id=362457460]
 offset_top = 26.0

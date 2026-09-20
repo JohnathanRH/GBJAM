@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c0id0ggnlo1jc"]
 
 [ext_resource type="Script" uid="uid://7vypunpn8rsw" path="res://props/bullets/sawed_off/sawed_off_bullet.gd" id="1_n4uis"]
+[ext_resource type="Texture2D" uid="uid://cjlciaiqkql7i" path="res://assets/TESTONLY/sawed_off.png" id="2_mldli"]
 
 [node name="SawedOffRegular" type="Node" unique_id=860092336]
 script = ExtResource("1_n4uis")
 damage = 1.0
+icon = ExtResource("2_mldli")
 target_amount = 3
 metadata/_custom_type_script = "uid://7vypunpn8rsw"
