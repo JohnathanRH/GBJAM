@@ -3,9 +3,9 @@ extends Node
 var file: SaveFile
 var save_name: String = "my_save"
 var default_path: String = "res://save_files/default.tres"
-@onready var save_path = "res://save_files/"+save_name+".tres"
+var save_path = "res://save_files/"+save_name+".tres"
 
-func _ready() -> void:
+func _enter_tree() -> void:
 	load_file()
 
 func load_file() -> void:

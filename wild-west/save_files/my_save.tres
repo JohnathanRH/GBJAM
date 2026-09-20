@@ -1,20 +1,16 @@
-[gd_resource type="Resource" script_class="SaveFile" format=3 uid="uid://bu6ay835lh03i"]
+[gd_resource type="Resource" script_class="SaveFile" format=3]
 
-[ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_7e8d5"]
-[ext_resource type="PackedScene" uid="uid://on5tcm7rsbvl" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_1usjy"]
-[ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="3_xfewk"]
-[ext_resource type="PackedScene" uid="uid://86qyn4h1rpk5" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_ubcxq"]
-[ext_resource type="PackedScene" uid="uid://c0id0ggnlo1jc" path="res://props/bullets/sawed_off/sawed_off_regular.tscn" id="5_t720d"]
-[ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="6_sks1u"]
-[ext_resource type="PackedScene" uid="uid://by6crvnnen0rj" path="res://props/bullets/short_fuse/short_fuse_regular.tscn" id="7_njcsg"]
-[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="8_glo6q"]
-[ext_resource type="Script" uid="uid://ccpfjmgwt8haq" path="res://common/resources/player_resource.gd" id="9_nv3nx"]
-[ext_resource type="Script" uid="uid://j5umjqs4dddh" path="res://common/resources/save_file.gd" id="10_kn5yg"]
-[ext_resource type="Resource" uid="uid://qwgn2e7y1qh1" path="res://stages/stage_one/stage_one.tres" id="11_1usjy"]
+[ext_resource type="PackedScene" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_7e8d5"]
+[ext_resource type="PackedScene" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_1usjy"]
+[ext_resource type="PackedScene" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_ubcxq"]
+[ext_resource type="Texture2D" path="res://assets/TESTONLY/symbol_slash.png" id="8_glo6q"]
+[ext_resource type="Script" path="res://common/resources/player_resource.gd" id="9_nv3nx"]
+[ext_resource type="Script" path="res://common/resources/save_file.gd" id="10_kn5yg"]
+[ext_resource type="Resource" path="res://stages/stage_one/stage_one.tres" id="11_1usjy"]
 
 [sub_resource type="Resource" id="Resource_ng68p"]
 script = ExtResource("9_nv3nx")
-bullets = Array[PackedScene]([ExtResource("1_7e8d5"), ExtResource("2_1usjy"), ExtResource("3_xfewk"), ExtResource("4_ubcxq"), ExtResource("5_t720d"), ExtResource("6_sks1u"), ExtResource("7_njcsg")])
+bullets = Array[PackedScene]([ExtResource("1_7e8d5"), ExtResource("1_7e8d5"), ExtResource("1_7e8d5"), ExtResource("4_ubcxq"), ExtResource("2_1usjy"), ExtResource("1_7e8d5"), ExtResource("2_1usjy")])
 safe_segment = 0.7
 gauge_icon = ExtResource("8_glo6q")
 metadata/_custom_type_script = "uid://dwfgbovhpre8f"

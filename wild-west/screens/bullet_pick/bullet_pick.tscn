@@ -1,3 +1,48 @@
 [gd_scene format=3 uid="uid://c0wg1tds24l5n"]
 
+[ext_resource type="Script" uid="uid://cf0ldtvuaof4b" path="res://common/selectable_ui/selectables_container.gd" id="1_fkdi8"]
+[ext_resource type="Script" uid="uid://hx0inbrv3p52" path="res://screens/bullet_pick/bullet_pick.gd" id="1_jsny2"]
+[ext_resource type="PackedScene" uid="uid://on5tcm7rsbvl" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_myd5j"]
+[ext_resource type="PackedScene" uid="uid://86qyn4h1rpk5" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="3_5nku0"]
+[ext_resource type="PackedScene" uid="uid://dfvy84dnmhjvx" path="res://common/selectable_ui/selectable_bullet.tscn" id="3_qgshg"]
+[ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="4_tybtc"]
+[ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="5_pupa4"]
+[ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="6_h8eai"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
+
 [node name="BulletPick" type="Node2D" unique_id=2102221851]
+script = ExtResource("1_jsny2")
+loot_pool = Array[PackedScene]([ExtResource("2_myd5j"), ExtResource("3_5nku0"), ExtResource("4_tybtc"), ExtResource("5_pupa4"), ExtResource("6_h8eai")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657539879]
+self_modulate = Color(0.5372549, 0.19607843, 0.13333334, 1)
+position = Vector2(80, 72.00001)
+scale = Vector2(156, 140.00002)
+texture = SubResource("PlaceholderTexture2D_s1fef")
+metadata/_edit_lock_ = true
+
+[node name="SelectablesContainer" type="GridContainer" parent="." unique_id=520403347]
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 150.0
+offset_bottom = 59.0
+columns = 6
+script = ExtResource("1_fkdi8")
+metadata/_custom_type_script = "uid://cf0ldtvuaof4b"
+
+[node name="LootContainer" type="GridContainer" parent="." unique_id=473266688]
+offset_left = 48.0
+offset_top = 61.0
+offset_right = 116.0
+offset_bottom = 85.0
+columns = 5
+
+[node name="Loot" parent="LootContainer" unique_id=1098614045 instance=ExtResource("3_qgshg")]
+layout_mode = 2
+
+[node name="Loot2" parent="LootContainer" unique_id=384059232 instance=ExtResource("3_qgshg")]
+layout_mode = 2
+
+[node name="Loot3" parent="LootContainer" unique_id=1374029749 instance=ExtResource("3_qgshg")]
+layout_mode = 2
