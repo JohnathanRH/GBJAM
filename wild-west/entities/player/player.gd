@@ -35,7 +35,7 @@ func manual_fire() -> void:
 
 func mirror_entity_resource() -> void:
 	super.mirror_entity_resource()
-	hp = 5
+	hp = max_hp
 	for bullet_scn: PackedScene in entity_resource.bullets:
 		var bullet: Bullet = bullet_scn.instantiate()
 		bullets.push_back(bullet)

@@ -64,6 +64,7 @@ func receive_piercing_damage(dam: float) -> void:
 
 func set_hp(value: float) -> void:
 	hp = value
+	print(hp)
 	hp_set.emit(hp)
 	if hp <= 0:
 		dead.emit(self)

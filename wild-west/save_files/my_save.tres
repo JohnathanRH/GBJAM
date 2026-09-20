@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SaveFile" format=3]
+
+[ext_resource type="PackedScene" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_7e8d5"]
+[ext_resource type="PackedScene" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_1usjy"]
+[ext_resource type="PackedScene" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="3_xfewk"]
+[ext_resource type="PackedScene" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_ubcxq"]
+[ext_resource type="PackedScene" path="res://props/bullets/sawed_off/sawed_off_regular.tscn" id="5_t720d"]
+[ext_resource type="PackedScene" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="6_sks1u"]
+[ext_resource type="PackedScene" path="res://props/bullets/short_fuse/short_fuse_regular.tscn" id="7_njcsg"]
+[ext_resource type="Texture2D" path="res://assets/TESTONLY/symbol_slash.png" id="8_glo6q"]
+[ext_resource type="Script" path="res://common/resources/player_resource.gd" id="9_nv3nx"]
+[ext_resource type="Script" path="res://common/resources/save_file.gd" id="10_kn5yg"]
+
+[sub_resource type="Resource" id="Resource_ng68p"]
+script = ExtResource("9_nv3nx")
+bullets = Array[PackedScene]([ExtResource("1_7e8d5"), ExtResource("2_1usjy"), ExtResource("3_xfewk"), ExtResource("4_ubcxq"), ExtResource("5_t720d"), ExtResource("6_sks1u"), ExtResource("7_njcsg")])
+gauge_duration = 6.0
+safe_segment = 0.7
+gauge_icon = ExtResource("8_glo6q")
+metadata/_custom_type_script = "uid://dwfgbovhpre8f"
+
+[resource]
+script = ExtResource("10_kn5yg")
+player_resource = SubResource("Resource_ng68p")
+metadata/_custom_type_script = "uid://j5umjqs4dddh"

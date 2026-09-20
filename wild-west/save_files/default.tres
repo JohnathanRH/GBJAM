@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SaveFile" format=3 uid="uid://bagkpj7nv6oum"]
+
+[ext_resource type="Script" uid="uid://j5umjqs4dddh" path="res://common/resources/save_file.gd" id="1_8dwoy"]
+[ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_n634b"]
+[ext_resource type="PackedScene" uid="uid://on5tcm7rsbvl" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_w5lew"]
+[ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="3_c0anj"]
+[ext_resource type="PackedScene" uid="uid://86qyn4h1rpk5" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_t17bj"]
+[ext_resource type="PackedScene" uid="uid://c0id0ggnlo1jc" path="res://props/bullets/sawed_off/sawed_off_regular.tscn" id="5_tjcik"]
+[ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="6_g2gwa"]
+[ext_resource type="PackedScene" uid="uid://by6crvnnen0rj" path="res://props/bullets/short_fuse/short_fuse_regular.tscn" id="7_lke2g"]
+[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="8_ftefb"]
+[ext_resource type="Script" uid="uid://ccpfjmgwt8haq" path="res://common/resources/player_resource.gd" id="9_i6ws2"]
+
+[sub_resource type="Resource" id="Resource_ng68p"]
+script = ExtResource("9_i6ws2")
+bullets = Array[PackedScene]([ExtResource("1_n634b"), ExtResource("2_w5lew"), ExtResource("3_c0anj"), ExtResource("4_t17bj"), ExtResource("5_tjcik"), ExtResource("6_g2gwa"), ExtResource("7_lke2g")])
+gauge_duration = 6.0
+safe_segment = 0.7
+gauge_icon = ExtResource("8_ftefb")
+metadata/_custom_type_script = "uid://dwfgbovhpre8f"
+
+[resource]
+script = ExtResource("1_8dwoy")
+player_resource = SubResource("Resource_ng68p")
+metadata/_custom_type_script = "uid://j5umjqs4dddh"
