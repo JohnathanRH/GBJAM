@@ -4,32 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://d38lxq2d0n56j" path="res://entities/player/player.tscn" id="1_hs5nc"]
 [ext_resource type="Script" uid="uid://bwbixgojfrj8q" path="res://common/tween_animations/float_up/float_up.gd" id="2_52jb1"]
 [ext_resource type="PackedScene" uid="uid://dl5grlf6nqrtr" path="res://common/gauge_bar/gauge_bar.tscn" id="2_hs5nc"]
-[ext_resource type="PackedScene" uid="uid://dnmrl758eac4u" path="res://entities/enemy/enemy.tscn" id="2_phyky"]
-[ext_resource type="Resource" uid="uid://v5wm3ypwcgt" path="res://entities/enemy/test_yeehaw.tres" id="5_f56do"]
-[ext_resource type="Texture2D" uid="uid://cjcl2srddwsmg" path="res://assets/TESTONLY/symbol_heal.png" id="6_bq5v2"]
 [ext_resource type="PackedScene" uid="uid://cqqof33xxdhtc" path="res://props/bullet_container/bullets_container.tscn" id="7_bq5v2"]
-[ext_resource type="PackedScene" uid="uid://dflajau3iu10t" path="res://props/intents/block/block_intent.tscn" id="7_cuh3k"]
-[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="8_c6ykn"]
-[ext_resource type="PackedScene" uid="uid://82xv5ya3eubr" path="res://props/intents/damage/light_damage.tscn" id="9_cf5m0"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
-
-[sub_resource type="Resource" id="Resource_pys20"]
-script = ExtResource("8_c6ykn")
-intents = Array[PackedScene]([ExtResource("7_cuh3k"), ExtResource("9_cf5m0")])
-gauge_duration = 4.5
-max_gauge = 6.0
-safe_segment = 0.7
-gauge_icon = ExtResource("6_bq5v2")
-metadata/_custom_type_script = "uid://dh7bfboklvbvo"
-
-[sub_resource type="Resource" id="Resource_q5ngc"]
-script = ExtResource("8_c6ykn")
-intents = Array[PackedScene]([ExtResource("7_cuh3k"), ExtResource("9_cf5m0")])
-gauge_duration = 4.2
-safe_segment = 0.7
-gauge_icon = ExtResource("6_bq5v2")
-metadata/_custom_type_script = "uid://dh7bfboklvbvo"
 
 [node name="MainGame" type="Node2D" unique_id=808725349]
 script = ExtResource("1_dyq00")
@@ -57,17 +34,16 @@ offset_bottom = 185.0
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Enemy" parent="." unique_id=465984190 instance=ExtResource("2_phyky")]
+[node name="EnemyPositions" type="Node2D" parent="." unique_id=280840777]
+
+[node name="Marker2D" type="Marker2D" parent="EnemyPositions" unique_id=453787749]
 position = Vector2(125, 74)
-entity_resource = ExtResource("5_f56do")
 
-[node name="Enemy2" parent="." unique_id=1735802820 instance=ExtResource("2_phyky")]
+[node name="Marker2D2" type="Marker2D" parent="EnemyPositions" unique_id=1832931186]
 position = Vector2(125, 47)
-entity_resource = SubResource("Resource_pys20")
 
-[node name="Enemy3" parent="." unique_id=395739288 instance=ExtResource("2_phyky")]
+[node name="Marker2D3" type="Marker2D" parent="EnemyPositions" unique_id=456545379]
 position = Vector2(125, 18)
-entity_resource = SubResource("Resource_q5ngc")
 
 [node name="FloatUpAnimation" type="Node" parent="." unique_id=372753244 node_paths=PackedStringArray("node")]
 script = ExtResource("2_52jb1")
