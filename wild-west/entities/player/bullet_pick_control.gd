@@ -46,7 +46,7 @@ func set_pointer(value: int) -> void:
 		print("Warning: Tried to set targeting pointer to < 0 ("+str(pointer)+")")
 		pointer = 0
 	elif value >= container.get_child_count():
-		print("Warning: Tried to set targeting pointer to >= container cards count ("+str(pointer)+")")
+		print("Warning: Tried to set targeting pointer to >= container bullet count ("+str(pointer)+")")
 		pointer = container.get_child_count()-1
 	else:
 		pointer = value

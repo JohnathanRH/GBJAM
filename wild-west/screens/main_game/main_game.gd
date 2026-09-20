@@ -12,4 +12,14 @@ func _enter_tree() -> void:
 		
 		enemy.entity_resource = stage.enemies[i]
 		enemy.position = position
+		enemy.dead.connect(_on_enemy_death)
 		add_child(enemy)
+
+func _on_enemy_death(enemy: Entity) -> void:
+	$VictoryDelay.start()
+	#print("An enemy has died")
+
+func _on_victory_delay_timeout() -> void:
+	var enemies_alive = get_tree().get_node_count_in_group("enemies")
+	if enemies_alive == 0:
+		get_tree().change_scene_to_file("res://screens/bullet_pick/bullet_pick.tscn")

@@ -54,8 +54,13 @@ func untarget_enemies() -> void:
 			player.selected_targets.erase(enemy)
 
 func set_pointer(value: int) -> void:
-	if value < 0 or value >= enemies.size():
-		print("Warning: Tried to set targeting pointer to an out of bounds value")
+	enemies.assign(get_tree().get_nodes_in_group("enemies"))
+	if value < 0:
+		print("Warning: Tried to set enemy targeting pointer to < 0 ("+str(pointer)+")")
+		pointer = 0
+	elif value >= enemies.size():
+		print("Warning: Tried to set enemy targeting pointer to >= container cards count ("+str(pointer)+")")
+		pointer = enemies.size()-1
 	else:
 		pointer = value
 

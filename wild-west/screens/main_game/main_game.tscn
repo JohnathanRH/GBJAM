@@ -62,3 +62,9 @@ finish_signal_delay = 0.0
 auto_play = true
 node = NodePath("../BulletsContainer")
 metadata/_custom_type_script = "uid://bwbixgojfrj8q"
+
+[node name="VictoryDelay" type="Timer" parent="." unique_id=62720207]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="VictoryDelay" to="." method="_on_victory_delay_timeout"]
