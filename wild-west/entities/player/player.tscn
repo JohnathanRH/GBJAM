@@ -5,6 +5,7 @@
 [ext_resource type="Resource" uid="uid://bp4b74uqyp4qa" path="res://entities/player/default.tres" id="3_sglur"]
 [ext_resource type="PackedScene" uid="uid://dltujqffb3gm4" path="res://entities/player/enemy_pick_control.tscn" id="4_bls4j"]
 [ext_resource type="PackedScene" uid="uid://bxxpunf4e5xt5" path="res://entities/player/bullet_pick_control.tscn" id="5_fkugw"]
+[ext_resource type="PackedScene" uid="uid://c5bfilgtrdasr" path="res://common/hp_bar/hp_bar.tscn" id="6_8fjmc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglur"]
 atlas = ExtResource("1_abrql")
@@ -81,3 +82,9 @@ entity_resource = ExtResource("3_sglur")
 [node name="BulletPickControl" parent="." unique_id=1582646411 instance=ExtResource("5_fkugw")]
 
 [node name="Bullets" type="Node" parent="." unique_id=58880926]
+
+[node name="HpBar" parent="." unique_id=1192804881 instance=ExtResource("6_8fjmc")]
+offset_left = -12.0
+offset_top = 9.0
+offset_right = 12.0
+offset_bottom = 15.0

@@ -21,6 +21,7 @@ var status_container: StatusContainer
 signal set_fill_speed(scale)
 signal damage_received
 signal dead(entity: Entity)
+signal hp_set(value: float)
 
 func _init() -> void:
 	tweener = GaugeTween.new()
@@ -63,6 +64,7 @@ func receive_piercing_damage(dam: float) -> void:
 
 func set_hp(value: float) -> void:
 	hp = value
+	hp_set.emit(hp)
 	if hp <= 0:
 		dead.emit(self)
 		death()

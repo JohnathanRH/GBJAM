@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="3_3fvr7"]
 [ext_resource type="Texture2D" uid="uid://cr2rc2hh7wbxf" path="res://entities/enemy/targeted.png" id="3_4wwj3"]
 [ext_resource type="Script" uid="uid://barqiyliqhwqb" path="res://common/behaviours/behaviour_man.gd" id="4_dt443"]
+[ext_resource type="PackedScene" uid="uid://c5bfilgtrdasr" path="res://common/hp_bar/hp_bar.tscn" id="6_d50e0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4wwj3"]
 atlas = ExtResource("1_3fvr7")
@@ -87,3 +88,9 @@ texture = ExtResource("3_3fvr7")
 [node name="BehaviourMan" type="Node2D" parent="." unique_id=1968304472]
 script = ExtResource("4_dt443")
 metadata/_custom_type_script = "uid://barqiyliqhwqb"
+
+[node name="HpBar" parent="." unique_id=1192804881 instance=ExtResource("6_d50e0")]
+offset_left = -12.0
+offset_top = 9.0
+offset_right = 12.0
+offset_bottom = 15.0

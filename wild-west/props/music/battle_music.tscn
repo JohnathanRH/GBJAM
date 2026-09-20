@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cw3hcbwx26kw2"]
+
+[ext_resource type="AudioStream" uid="uid://kw8fonu4ka2a" path="res://assets/audio/Vaquero Valley-2.mp3" id="1_xnrj8"]
+
+[node name="BattleMusic" type="AudioStreamPlayer" unique_id=868792080]
+stream = ExtResource("1_xnrj8")

@@ -10,8 +10,8 @@ func _ready() -> void:
 	super._ready()
 
 func play() -> void:
-	var end_y = parent.position.y - distance
-	tween.tween_property(parent, "position:y", end_y, duration)
+	var end_y = node.position.y - distance
+	tween.tween_property(node, "position:y", end_y, duration)
 	tween.play()
 
 func _on_animation_finished() -> void:

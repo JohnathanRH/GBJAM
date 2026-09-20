@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c5bfilgtrdasr"]
+
+[ext_resource type="Texture2D" uid="uid://cw07tsjn2oabs" path="res://assets/TESTONLY/progress_outline.png" id="1_luqr6"]
+[ext_resource type="Texture2D" uid="uid://cc2r4v3mhmb8v" path="res://assets/TESTONLY/progress_red.png" id="2_kr05j"]
+[ext_resource type="Script" uid="uid://b7kifmeyhcign" path="res://common/hp_bar/hp_bar.gd" id="3_vea2r"]
+
+[node name="HpBar" type="TextureProgressBar" unique_id=1192804881]
+value = 50.0
+texture_over = ExtResource("1_luqr6")
+texture_progress = ExtResource("2_kr05j")
+script = ExtResource("3_vea2r")

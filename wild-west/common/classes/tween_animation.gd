@@ -3,7 +3,7 @@ extends Node
 class_name TweenAnimation
 
 @export var auto_play: bool
-@onready var parent: Node = get_parent()
+@export var node: Node = get_parent()
 
 var tween: Tween
 signal animation_finished

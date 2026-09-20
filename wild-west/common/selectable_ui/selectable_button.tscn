@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://thg1a0c1i78c"]
+
+[ext_resource type="Script" uid="uid://db7dgor44wimo" path="res://common/selectable_ui/selectable_button.gd" id="1_llnde"]
+
+[node name="SelectableButton" type="NinePatchRect" unique_id=776972607]
+script = ExtResource("1_llnde")

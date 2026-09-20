@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GBJAM Game"
-run/main_scene="uid://cwcupajhgky7e"
+run/main_scene="uid://bcxylbu57qdif"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalAudio="*uid://lyuqet71yruj"
 
 [debug]
 

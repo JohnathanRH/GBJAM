@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bcxylbu57qdif"]
+
+[ext_resource type="Script" uid="uid://bc6dbhc2e7m06" path="res://screens/main_menu/main_menu.gd" id="1_5k2jx"]
+[ext_resource type="PackedScene" uid="uid://ci813vfj6kiua" path="res://common/selectable_ui/selectables_container.tscn" id="2_hwsdy"]
+[ext_resource type="PackedScene" uid="uid://thg1a0c1i78c" path="res://common/selectable_ui/selectable_button.tscn" id="3_ay84d"]
+[ext_resource type="Texture2D" uid="uid://dm6lh7awl1287" path="res://assets/TESTONLY/CardFront.png" id="4_ux20d"]
+[ext_resource type="Texture2D" uid="uid://bd1vs87lppvxo" path="res://assets/TESTONLY/CardFrontSpecial.png" id="5_tldqp"]
+
+[node name="MainMenu" type="Node2D" unique_id=79016080]
+script = ExtResource("1_5k2jx")
+
+[node name="Label" type="Label" parent="." unique_id=362457460]
+offset_top = 26.0
+offset_right = 160.0
+offset_bottom = 55.0
+text = "The Ranger of
+Vaquero Valley"
+horizontal_alignment = 1
+
+[node name="SelectablesContainer" parent="." unique_id=544173882 instance=ExtResource("2_hwsdy")]
+offset_left = 50.0
+offset_top = 64.0
+offset_right = 112.0
+offset_bottom = 116.0
+
+[node name="Play" parent="SelectablesContainer" unique_id=1593180263 instance=ExtResource("3_ay84d")]
+custom_minimum_size = Vector2(40, 15)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_ux20d")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+select_texture = ExtResource("5_tldqp")
+
+[node name="Label" type="Label" parent="SelectablesContainer/Play" unique_id=503920720]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 61.0
+offset_bottom = 13.0
+theme_override_constants/outline_size = 2
+text = "Play"
+horizontal_alignment = 1
+
+[node name="Options" parent="SelectablesContainer" unique_id=776972607 instance=ExtResource("3_ay84d")]
+custom_minimum_size = Vector2(40, 15)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_ux20d")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+select_texture = ExtResource("5_tldqp")
+
+[node name="Label" type="Label" parent="SelectablesContainer/Options" unique_id=1838375151]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 60.0
+offset_bottom = 13.0
+theme_override_constants/outline_size = 2
+text = "Yeah"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="SelectablesContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="SelectablesContainer/Options" to="." method="_on_options_pressed"]
