@@ -26,4 +26,8 @@ func _on_victory_delay_timeout() -> void:
 		if SaveManager.file.stage_number >= Stages.stages.size()-1:
 			get_tree().change_scene_to_file("res://screens/ending/ending_scene.tscn")
 		else:
+			var save_file:SaveFile = SaveManager.file
+			save_file.stage_number += 1
+			SaveManager.save()
+			
 			get_tree().change_scene_to_file("res://screens/bullet_pick/bullet_pick.tscn")

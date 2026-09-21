@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var loot_pool: Array[PackedScene]
+@export var loot_amount: int = 3
 var button_scn = preload("res://common/selectable_ui/selectable_bullet.tscn")
 
 var loot_pointer: int = 0:
@@ -8,8 +9,6 @@ var loot_pointer: int = 0:
 
 func _enter_tree() -> void:
 	var save_file:SaveFile = SaveManager.file
-	save_file.stage_number += 1
-	SaveManager.save()
 	
 	var player: PlayerResource = save_file.player_resource
 	$SelectablesContainer.ui_selected.connect(_on_ui_selected)
@@ -19,9 +18,12 @@ func _enter_tree() -> void:
 		button.pressed.connect(_on_bullet_selected)
 		$SelectablesContainer.add_child(button)
 	
-	for loot: SelectableBullet in $LootContainer.get_children():
-		var bullet_scn = loot_pool.pick_random()
-		loot.bullet_scn = bullet_scn
+	if SaveManager.file.stage_number != 0:
+		for i in loot_amount:
+			var loot_btn: SelectableBullet = button_scn.instantiate()
+			var bullet_scn = loot_pool.pick_random()
+			loot_btn.bullet_scn = bullet_scn
+			$LootContainer.add_child(loot_btn)
 
 func _on_ui_selected(ui: Control) -> void:
 	if ui.has_method("selected"):
