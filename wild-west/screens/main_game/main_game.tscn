@@ -11,8 +11,8 @@
 script = ExtResource("1_dyq00")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1386097473]
-position = Vector2(79.375, 69.00001)
-scale = Vector2(1.0171875, 1.1111112)
+position = Vector2(79, 72.50001)
+scale = Vector2(1.2249999, 1.2708333)
 texture = ExtResource("2_xpwsd")
 
 [node name="GaugeBar" parent="." unique_id=850369798 instance=ExtResource("2_hs5nc")]
@@ -64,5 +64,9 @@ metadata/_custom_type_script = "uid://bwbixgojfrj8q"
 [node name="VictoryDelay" type="Timer" parent="." unique_id=62720207]
 wait_time = 3.0
 one_shot = true
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1022854531]
+unique_name_in_owner = true
+offset = Vector2(80, 72)
 
 [connection signal="timeout" from="VictoryDelay" to="." method="_on_victory_delay_timeout"]
