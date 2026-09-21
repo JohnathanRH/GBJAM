@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://dmrvplukmp1ud"]
+
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_h0klq"]
+[ext_resource type="Texture2D" uid="uid://b0fpco7cl3m63" path="res://entities/enemy/outlaw_1/outlaw_1_icon.png" id="1_rronn"]
+[ext_resource type="PackedScene" uid="uid://82xv5ya3eubr" path="res://props/intents/damage/light_damage.tscn" id="2_f3e4f"]
+[ext_resource type="PackedScene" uid="uid://b283ihsivierj" path="res://props/intents/slow/slow_regular.tscn" id="3_4f73v"]
+
+[resource]
+script = ExtResource("1_h0klq")
+intents = Array[PackedScene]([ExtResource("2_f3e4f"), ExtResource("3_4f73v")])
+safe_segment = 0.7
+gauge_icon = ExtResource("1_rronn")
+metadata/_custom_type_script = "uid://dh7bfboklvbvo"

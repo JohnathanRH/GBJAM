@@ -6,6 +6,9 @@
 [node name="SawedOffRegular" type="Node" unique_id=860092336]
 script = ExtResource("1_n4uis")
 damage = 1.0
+bullet_name = "Sawed Off"
 icon = ExtResource("2_mldli")
 target_amount = 3
+auto_description = "1 Dmg +1 if enemy is vulnerable"
+manual_description = "Redraw your bullet hand once"
 metadata/_custom_type_script = "uid://7vypunpn8rsw"

@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalAudio="*uid://lyuqet71yruj"
 SaveManager="*uid://ddx53mmsw1v6n"
+Stages="*uid://b446ukcls6n5n"
 
 [debug]
 

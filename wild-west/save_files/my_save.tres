@@ -1,22 +1,9 @@
 [gd_resource type="Resource" script_class="SaveFile" format=3]
 
-[ext_resource type="PackedScene" path="res://props/bullets/desperado/desperado_regular.tscn" id="1_7e8d5"]
-[ext_resource type="PackedScene" path="res://props/bullets/steady_aim/steady_aim_regular.tscn" id="2_1usjy"]
-[ext_resource type="PackedScene" path="res://props/bullets/buckshot/buckshot_regular.tscn" id="4_ubcxq"]
-[ext_resource type="Texture2D" path="res://assets/TESTONLY/symbol_slash.png" id="8_glo6q"]
-[ext_resource type="Script" path="res://common/resources/player_resource.gd" id="9_nv3nx"]
-[ext_resource type="Script" path="res://common/resources/save_file.gd" id="10_kn5yg"]
-[ext_resource type="Resource" path="res://stages/stage_one/stage_one.tres" id="11_1usjy"]
-
-[sub_resource type="Resource" id="Resource_ng68p"]
-script = ExtResource("9_nv3nx")
-bullets = Array[PackedScene]([ExtResource("1_7e8d5"), ExtResource("1_7e8d5"), ExtResource("1_7e8d5"), ExtResource("4_ubcxq"), ExtResource("2_1usjy"), ExtResource("1_7e8d5"), ExtResource("2_1usjy")])
-safe_segment = 0.7
-gauge_icon = ExtResource("8_glo6q")
-metadata/_custom_type_script = "uid://dwfgbovhpre8f"
+[ext_resource type="Resource" path="res://entities/player/default.tres" id="1_tak3b"]
+[ext_resource type="Script" path="res://common/resources/save_file.gd" id="2_j2gni"]
 
 [resource]
-script = ExtResource("10_kn5yg")
-player_resource = SubResource("Resource_ng68p")
-stage = ExtResource("11_1usjy")
+script = ExtResource("2_j2gni")
+player_resource = ExtResource("1_tak3b")
 metadata/_custom_type_script = "uid://j5umjqs4dddh"

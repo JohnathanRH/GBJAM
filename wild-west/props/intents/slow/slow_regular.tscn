@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b283ihsivierj"]
 
 [ext_resource type="Script" uid="uid://bq0b5sv8qql0r" path="res://props/intents/slow/slow_intent.gd" id="1_246ot"]
-[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="2_5dnw0"]
+[ext_resource type="Texture2D" uid="uid://cja8g6ym6mi5c" path="res://assets/TESTONLY/slow_intent.png" id="2_246ot"]
 
 [node name="Little" type="Node" unique_id=1874534237]
 script = ExtResource("1_246ot")
 speed_scale = 0.6
 duration = 3.0
-icon = ExtResource("2_5dnw0")
+icon = ExtResource("2_246ot")
 metadata/_custom_type_script = "uid://bq0b5sv8qql0r"

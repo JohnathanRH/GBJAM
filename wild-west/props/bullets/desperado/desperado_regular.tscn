@@ -5,8 +5,9 @@
 
 [node name="Regular" type="Node" unique_id=294648765]
 script = ExtResource("1_2iebm")
+bullet_name = "Desperado"
 icon = ExtResource("2_xthro")
 manual_target_self = true
-auto_description = "Deal 2 damage. additional 1 damage if your health is below 50%"
-manual_description = "Recover 1 Health"
+auto_description = "2 Dam (+1 if your HP < 50%)"
+manual_description = "Recover 1 HP"
 metadata/_custom_type_script = "uid://cy2vldw05p2ph"

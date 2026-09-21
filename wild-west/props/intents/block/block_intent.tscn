@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dflajau3iu10t"]
 
 [ext_resource type="Script" uid="uid://cip872ey7k38d" path="res://props/intents/block/block_intent.gd" id="1_iblis"]
-[ext_resource type="Texture2D" uid="uid://ddn28wfqkanms" path="res://assets/TESTONLY/symbol_shield.png" id="2_5oy6t"]
+[ext_resource type="Texture2D" uid="uid://ccdhhshgf6ta4" path="res://assets/TESTONLY/block_intent.png" id="2_5oy6t"]
 
 [node name="BlockIntent" type="Node" unique_id=894466552]
 script = ExtResource("1_iblis")

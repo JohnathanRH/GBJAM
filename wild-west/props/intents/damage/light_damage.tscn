@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://82xv5ya3eubr"]
 
 [ext_resource type="Script" uid="uid://de8y3dgkacd5c" path="res://props/intents/damage/damage_intent.gd" id="1_2clb0"]
-[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="2_6ejfo"]
+[ext_resource type="Texture2D" uid="uid://cxwr6npacjfi3" path="res://assets/TESTONLY/damage_intent.png" id="2_6ejfo"]
 
 [node name="LightDamage" type="Node" unique_id=2112341509]
 script = ExtResource("1_2clb0")

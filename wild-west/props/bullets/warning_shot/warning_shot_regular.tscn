@@ -5,7 +5,10 @@
 
 [node name="WarningShotRegular" type="Node" unique_id=483457939]
 script = ExtResource("1_a63qe")
+bullet_name = "Warning Shot"
 icon = ExtResource("2_yuhtw")
 target_amount = 3
 manual_target_self = true
+auto_description = "1 Damage. Reset gauge if enemy is vulnerable"
+manual_description = "Shield for 3 second"
 metadata/_custom_type_script = "uid://bc2gsu0pr3s4n"

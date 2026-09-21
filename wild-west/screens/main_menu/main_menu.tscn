@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ci813vfj6kiua" path="res://common/selectable_ui/selectables_container.tscn" id="2_hwsdy"]
 [ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="2_tldqp"]
 [ext_resource type="PackedScene" uid="uid://thg1a0c1i78c" path="res://common/selectable_ui/selectable_button.tscn" id="3_ay84d"]
-[ext_resource type="Texture2D" uid="uid://dm6lh7awl1287" path="res://assets/TESTONLY/CardFront.png" id="4_ux20d"]
-[ext_resource type="Texture2D" uid="uid://bd1vs87lppvxo" path="res://assets/TESTONLY/CardFrontSpecial.png" id="5_tldqp"]
+[ext_resource type="Texture2D" uid="uid://cfwearjnwa1pn" path="res://assets/TESTONLY/button_unselected.png" id="5_tldqp"]
+[ext_resource type="Texture2D" uid="uid://buolnr6niotv3" path="res://assets/TESTONLY/button_selected.png" id="6_kee05"]
 
 [node name="MainMenu" type="Node2D" unique_id=79016080]
 script = ExtResource("1_5k2jx")
@@ -18,6 +18,7 @@ texture = ExtResource("2_tldqp")
 offset_top = 26.0
 offset_right = 160.0
 offset_bottom = 55.0
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 text = "The Ranger of
 Vaquero Valley"
 horizontal_alignment = 1
@@ -32,19 +33,19 @@ offset_bottom = 116.0
 custom_minimum_size = Vector2(40, 15)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_ux20d")
+texture = ExtResource("5_tldqp")
 patch_margin_left = 1
 patch_margin_top = 1
 patch_margin_right = 1
 patch_margin_bottom = 1
-select_texture = ExtResource("5_tldqp")
+select_texture = ExtResource("6_kee05")
 
 [node name="Label" type="Label" parent="SelectablesContainer/Play" unique_id=503920720]
 layout_mode = 0
 offset_left = 2.0
 offset_right = 61.0
 offset_bottom = 13.0
-theme_override_constants/outline_size = 2
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 text = "Play"
 horizontal_alignment = 1
 
@@ -52,19 +53,19 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(40, 15)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("4_ux20d")
+texture = ExtResource("5_tldqp")
 patch_margin_left = 1
 patch_margin_top = 1
 patch_margin_right = 1
 patch_margin_bottom = 1
-select_texture = ExtResource("5_tldqp")
+select_texture = ExtResource("6_kee05")
 
 [node name="Label" type="Label" parent="SelectablesContainer/Options" unique_id=1838375151]
 layout_mode = 0
 offset_left = 2.0
 offset_right = 60.0
 offset_bottom = 13.0
-theme_override_constants/outline_size = 2
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 text = "Yeah"
 horizontal_alignment = 1
 

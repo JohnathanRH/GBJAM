@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://dfvy84dnmhjvx"]
 
-[ext_resource type="Texture2D" uid="uid://dm6lh7awl1287" path="res://assets/TESTONLY/CardFront.png" id="1_1v4yk"]
 [ext_resource type="Script" uid="uid://djkauwd1rht5s" path="res://common/selectable_ui/selectable_bullet.gd" id="1_ltctu"]
-[ext_resource type="Texture2D" uid="uid://c4nquys7l0ukl" path="res://assets/TESTONLY/symbol_slash.png" id="3_1v4yk"]
-[ext_resource type="Texture2D" uid="uid://bd1vs87lppvxo" path="res://assets/TESTONLY/CardFrontSpecial.png" id="3_yaohi"]
+[ext_resource type="Texture2D" uid="uid://bjttsh7flk8rq" path="res://assets/TESTONLY/bullet_bg.png" id="1_yaohi"]
+[ext_resource type="Texture2D" uid="uid://qxsfsyab5iga" path="res://assets/TESTONLY/bullet_selected_bg.png" id="3_8507e"]
+[ext_resource type="Texture2D" uid="uid://2c517lcefkcp" path="res://assets/TESTONLY/bullet.png" id="4_8507e"]
+[ext_resource type="Texture2D" uid="uid://c4i7wkdevburc" path="res://assets/TESTONLY/steady_aim.png" id="5_vg5rg"]
 
 [node name="SelectableBullet" type="TextureRect" unique_id=1098614045]
-offset_right = 20.0
+offset_right = 16.0
 offset_bottom = 24.0
-texture = ExtResource("1_1v4yk")
+texture = ExtResource("1_yaohi")
 script = ExtResource("1_ltctu")
-select_texture = ExtResource("3_yaohi")
+select_texture = ExtResource("3_8507e")
+
+[node name="Bullet" type="Sprite2D" parent="." unique_id=1486573731]
+position = Vector2(8, 12)
+texture = ExtResource("4_8507e")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=997386822]
-position = Vector2(10, 12)
-texture = ExtResource("3_1v4yk")
+position = Vector2(8, 17)
+texture = ExtResource("5_vg5rg")

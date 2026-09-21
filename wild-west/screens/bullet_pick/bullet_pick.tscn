@@ -8,19 +8,34 @@
 [ext_resource type="PackedScene" uid="uid://cvnt4mur5gvc2" path="res://props/bullets/piercing_round/piercing_regular.tscn" id="4_tybtc"]
 [ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="5_pupa4"]
 [ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="6_h8eai"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s1fef"]
+[ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="7_5nku0"]
 
 [node name="BulletPick" type="Node2D" unique_id=2102221851]
 script = ExtResource("1_jsny2")
 loot_pool = Array[PackedScene]([ExtResource("2_myd5j"), ExtResource("3_5nku0"), ExtResource("4_tybtc"), ExtResource("5_pupa4"), ExtResource("6_h8eai")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657539879]
-self_modulate = Color(0.5372549, 0.19607843, 0.13333334, 1)
 position = Vector2(80, 72.00001)
-scale = Vector2(156, 140.00002)
-texture = SubResource("PlaceholderTexture2D_s1fef")
+texture = ExtResource("7_5nku0")
 metadata/_edit_lock_ = true
+
+[node name="CardName" type="Label" parent="." unique_id=2132124152]
+offset_left = 6.0
+offset_top = 57.0
+offset_right = 69.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "Name"
+
+[node name="Targets" type="Label" parent="." unique_id=505228540]
+offset_left = 6.0
+offset_top = 73.0
+offset_right = 69.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
+theme_override_font_sizes/font_size = 16
+text = "1 Target(s)"
 
 [node name="SelectablesContainer" type="GridContainer" parent="." unique_id=520403347]
 offset_left = 10.0
@@ -32,9 +47,9 @@ script = ExtResource("1_fkdi8")
 metadata/_custom_type_script = "uid://cf0ldtvuaof4b"
 
 [node name="LootContainer" type="GridContainer" parent="." unique_id=473266688]
-offset_left = 48.0
+offset_left = 86.0
 offset_top = 61.0
-offset_right = 116.0
+offset_right = 154.0
 offset_bottom = 85.0
 columns = 5
 
@@ -52,27 +67,36 @@ offset_left = 5.0
 offset_top = 90.0
 offset_right = 155.0
 offset_bottom = 130.0
+theme_override_constants/h_separation = 0
 columns = 2
 
 [node name="Label" type="Label" parent="GridContainer" unique_id=1640799554]
 layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 theme_override_font_sizes/font_size = 16
 text = "Auto:"
 
 [node name="AutoDesc" type="Label" parent="GridContainer" unique_id=1616069213]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
+theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 16
 text = "Lorem Ipsum Dolor Sit Amet"
 autowrap_mode = 3
 
 [node name="Label3" type="Label" parent="GridContainer" unique_id=1723334]
 layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 theme_override_font_sizes/font_size = 16
 text = "Manual:"
 
 [node name="ManualDesc" type="Label" parent="GridContainer" unique_id=2108265014]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
+theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 16
 text = "Lorem Ipsum Dolor Sit Amet"
 autowrap_mode = 3

@@ -38,10 +38,10 @@ alignment = 1
 position = Vector2(125, 82)
 
 [node name="Marker2D2" type="Marker2D" parent="EnemyPositions" unique_id=1832931186]
-position = Vector2(92, 48)
+position = Vector2(76, 81)
 
 [node name="Marker2D3" type="Marker2D" parent="EnemyPositions" unique_id=456545379]
-position = Vector2(125, 18)
+position = Vector2(99, 30)
 
 [node name="FloatUpAnimation" type="Node" parent="." unique_id=372753244 node_paths=PackedStringArray("node")]
 script = ExtResource("2_52jb1")

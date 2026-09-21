@@ -4,8 +4,9 @@ var enemy_scn = preload("res://entities/enemy/enemy.tscn")
 
 func _enter_tree() -> void:
 	$Player.entity_resource = SaveManager.file.player_resource
+	var stage_num: int = SaveManager.file.stage_number
 	
-	var stage = SaveManager.file.stage
+	var stage: Stage = Stages.fetch(stage_num)
 	for i in stage.enemies.size():
 		var enemy: Enemy = enemy_scn.instantiate()
 		var position: Vector2 = $EnemyPositions.get_child(i).position
