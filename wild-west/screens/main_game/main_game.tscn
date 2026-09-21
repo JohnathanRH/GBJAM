@@ -73,6 +73,7 @@ offset = Vector2(80, 72)
 offset_left = 2.0
 offset_right = 68.0
 offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.13725491, 0.22352941, 0.2, 1)
 text = "Bullet Name"
 
 [connection signal="bullet_selected" from="Player" to="." method="_on_player_bullet_selected"]
