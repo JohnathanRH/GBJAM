@@ -165,6 +165,7 @@ offset_left = 162.0
 offset_top = 72.0
 offset_right = 222.0
 offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.8352941, 0.84705883, 0.81960785, 1)
 text = "Has fallen"
 
 [node name="Label3" type="Label" parent="." unique_id=1378898752]

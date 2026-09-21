@@ -6,5 +6,4 @@
 [resource]
 script = ExtResource("2_j2gni")
 player_resource = ExtResource("1_tak3b")
-stage_number = 1
 metadata/_custom_type_script = "uid://j5umjqs4dddh"
