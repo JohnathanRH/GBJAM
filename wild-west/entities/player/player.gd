@@ -10,7 +10,6 @@ var selected_targets: Array[Enemy]
 
 signal bullet_selected
 signal auto_fired
-#signal target_selected
 
 func fire_bullet() -> void:
 	for bullet_btn: BulletButton in bullet_container.get_children():

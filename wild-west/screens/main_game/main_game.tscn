@@ -69,4 +69,11 @@ one_shot = true
 unique_name_in_owner = true
 offset = Vector2(80, 72)
 
+[node name="BulletName" type="Label" parent="." unique_id=757481290]
+offset_left = 2.0
+offset_right = 68.0
+offset_bottom = 13.0
+text = "Bullet Name"
+
+[connection signal="bullet_selected" from="Player" to="." method="_on_player_bullet_selected"]
 [connection signal="timeout" from="VictoryDelay" to="." method="_on_victory_delay_timeout"]

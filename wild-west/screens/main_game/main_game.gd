@@ -60,3 +60,6 @@ func _shake_camera() -> void:
 			)
 		tween.tween_property(%Camera, "offset", offset, shake_duration / 5.0)
 	tween.tween_property(%Camera, "offset", original_offset, shake_duration / 5.0)
+
+func _on_player_bullet_selected() -> void:
+	$BulletName.text = $Player.selected_bullet.bullet_name
