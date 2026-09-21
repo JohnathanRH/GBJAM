@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyResource" format=3 uid="uid://ce47gv3i7gegi"]
+
+[ext_resource type="Texture2D" uid="uid://b0fpco7cl3m63" path="res://entities/enemy/light_damage_outlaw/outlaw_1_icon.png" id="1_775ur"]
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_mgjtm"]
+[ext_resource type="PackedScene" uid="uid://d0nv5kjm7yvcq" path="res://props/intents/damage/medium_damage.tscn" id="2_mtsxg"]
+[ext_resource type="PackedScene" uid="uid://4e8pq15i4y15" path="res://props/intents/napalm/napalm_regular.tscn" id="3_5adni"]
+[ext_resource type="PackedScene" uid="uid://cjnpyg765ll5j" path="res://props/intents/slow/slow_medium.tscn" id="4_mtsxg"]
+
+[resource]
+script = ExtResource("1_mgjtm")
+intents = Array[PackedScene]([ExtResource("2_mtsxg"), ExtResource("3_5adni"), ExtResource("4_mtsxg")])
+max_hp = 25.0
+gauge_duration = 3.8
+gauge_icon = ExtResource("1_775ur")
+metadata/_custom_type_script = "uid://dh7bfboklvbvo"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cjnpyg765ll5j"]
+
+[ext_resource type="Script" uid="uid://bq0b5sv8qql0r" path="res://props/intents/slow/slow_intent.gd" id="1_6qoqs"]
+[ext_resource type="Texture2D" uid="uid://d2ak7pgx2ym65" path="res://assets/TESTONLY/warning_shot.png" id="2_6xprf"]
+
+[node name="SlowMedium" type="Node" unique_id=1142549244]
+script = ExtResource("1_6qoqs")
+speed_scale = 0.1
+duration = 2.0
+icon = ExtResource("2_6xprf")
+metadata/_custom_type_script = "uid://bq0b5sv8qql0r"

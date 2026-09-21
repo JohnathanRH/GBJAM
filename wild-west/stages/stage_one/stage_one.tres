@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_camvl"]
 [ext_resource type="Script" uid="uid://dg4igk8l7o12j" path="res://common/resources/stage.gd" id="2_5rju1"]
-[ext_resource type="Resource" uid="uid://dmrvplukmp1ud" path="res://entities/enemy/outlaw_1/outlaw_1.tres" id="2_wyymo"]
+[ext_resource type="Resource" uid="uid://dmrvplukmp1ud" path="res://entities/enemy/light_damage_outlaw/outlaw_1.tres" id="2_wyymo"]
 
 [resource]
 script = ExtResource("2_5rju1")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stage" format=3 uid="uid://4lfa2m37kvvt"]
+
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_5iy0f"]
+[ext_resource type="Script" uid="uid://dg4igk8l7o12j" path="res://common/resources/stage.gd" id="2_4mqdq"]
+[ext_resource type="Resource" uid="uid://d23dcdlfki2kt" path="res://entities/enemy/medium_damage_outlaw/medium_damage_outlaw.tres" id="2_e5sj7"]
+[ext_resource type="Resource" uid="uid://dmrvplukmp1ud" path="res://entities/enemy/light_damage_outlaw/outlaw_1.tres" id="3_co1r8"]
+
+[resource]
+script = ExtResource("2_4mqdq")
+enemies = Array[ExtResource("1_5iy0f")]([ExtResource("2_e5sj7"), ExtResource("3_co1r8"), ExtResource("3_co1r8")])
+metadata/_custom_type_script = "uid://dg4igk8l7o12j"

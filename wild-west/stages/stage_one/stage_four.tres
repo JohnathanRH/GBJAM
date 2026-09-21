@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stage" format=3 uid="uid://bj07ildcbgh2c"]
+
+[ext_resource type="Script" uid="uid://dh7bfboklvbvo" path="res://common/resources/enemy.gd" id="1_7a8cj"]
+[ext_resource type="Script" uid="uid://dg4igk8l7o12j" path="res://common/resources/stage.gd" id="2_8a7ln"]
+[ext_resource type="Resource" uid="uid://ce47gv3i7gegi" path="res://entities/enemy/boss_outlaw/boss_outlaw.tres" id="2_ok0du"]
+[ext_resource type="Resource" uid="uid://d23dcdlfki2kt" path="res://entities/enemy/medium_damage_outlaw/medium_damage_outlaw.tres" id="3_qtu1y"]
+
+[resource]
+script = ExtResource("2_8a7ln")
+enemies = Array[ExtResource("1_7a8cj")]([ExtResource("2_ok0du"), ExtResource("3_qtu1y")])
+metadata/_custom_type_script = "uid://dg4igk8l7o12j"

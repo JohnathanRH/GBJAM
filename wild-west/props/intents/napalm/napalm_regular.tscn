@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://4e8pq15i4y15"]
+
+[ext_resource type="Script" uid="uid://1kgkssmbpxo2" path="res://props/intents/napalm/napalm_intent.gd" id="1_k1uks"]
+[ext_resource type="Texture2D" uid="uid://dmf5ffklbdoml" path="res://assets/TESTONLY/doc_icon.png" id="2_qhfbd"]
+
+[node name="NapalmRegular" type="Node" unique_id=1266930624]
+script = ExtResource("1_k1uks")
+icon = ExtResource("2_qhfbd")
+metadata/_custom_type_script = "uid://1kgkssmbpxo2"

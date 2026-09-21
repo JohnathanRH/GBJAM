@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmn33wam5ujut"
-path="res://.godot/imported/Outlaw1.png-d21c6071876ae44d551185f962502397.ctex"
+uid="uid://b0fpco7cl3m63"
+path="res://.godot/imported/outlaw_1_icon.png-47f35c1c68e1b31a8734623a23616ca5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://entities/enemy/outlaw_1/Outlaw1.png"
-dest_files=["res://.godot/imported/Outlaw1.png-d21c6071876ae44d551185f962502397.ctex"]
+source_file="res://entities/enemy/light_damage_outlaw/outlaw_1_icon.png"
+dest_files=["res://.godot/imported/outlaw_1_icon.png-47f35c1c68e1b31a8734623a23616ca5.ctex"]
 
 [params]
 

@@ -9,10 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://bg7u8bfxkobu8" path="res://props/bullets/warning_shot/warning_shot_regular.tscn" id="5_pupa4"]
 [ext_resource type="PackedScene" uid="uid://cuaul7vq5wh00" path="res://props/bullets/desperado/desperado_regular.tscn" id="6_h8eai"]
 [ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="7_5nku0"]
+[ext_resource type="PackedScene" uid="uid://by6crvnnen0rj" path="res://props/bullets/short_fuse/short_fuse_regular.tscn" id="7_pupa4"]
+[ext_resource type="PackedScene" uid="uid://c0id0ggnlo1jc" path="res://props/bullets/sawed_off/sawed_off_regular.tscn" id="8_h8eai"]
 
 [node name="BulletPick" type="Node2D" unique_id=2102221851]
 script = ExtResource("1_jsny2")
-loot_pool = Array[PackedScene]([ExtResource("2_myd5j"), ExtResource("3_5nku0"), ExtResource("4_tybtc"), ExtResource("5_pupa4"), ExtResource("6_h8eai")])
+loot_pool = Array[PackedScene]([ExtResource("2_myd5j"), ExtResource("3_5nku0"), ExtResource("4_tybtc"), ExtResource("5_pupa4"), ExtResource("6_h8eai"), ExtResource("7_pupa4"), ExtResource("8_h8eai")])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657539879]
 position = Vector2(80, 72.00001)

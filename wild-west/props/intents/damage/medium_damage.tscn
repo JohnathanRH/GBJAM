@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d0nv5kjm7yvcq"]
+
+[ext_resource type="Script" uid="uid://de8y3dgkacd5c" path="res://props/intents/damage/damage_intent.gd" id="1_jb3rs"]
+[ext_resource type="Texture2D" uid="uid://c4i7wkdevburc" path="res://assets/TESTONLY/steady_aim.png" id="2_vbj5c"]
+
+[node name="MediumDamage" type="Node" unique_id=1606474334]
+script = ExtResource("1_jb3rs")
+damage = 4.0
+icon = ExtResource("2_vbj5c")
+metadata/_custom_type_script = "uid://de8y3dgkacd5c"
