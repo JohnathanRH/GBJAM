@@ -7,6 +7,6 @@
 script = ExtResource("1_j6suk")
 bullet_name = "Steady Aim"
 icon = ExtResource("2_atybc")
-auto_description = "2 Damage"
+auto_description = "2 DMG"
 manual_description = "Enemy gauge -30%. Total reset if vulnerable"
 metadata/_custom_type_script = "uid://y3bqn4o3udey"

@@ -8,6 +8,6 @@ script = ExtResource("1_mbp6d")
 bullet_name = "Short Fuse"
 icon = ExtResource("2_gru4w")
 manual_target_self = true
-auto_description = "1 Damage over 3 cycles"
+auto_description = "1 DMG over 3 cycles"
 manual_description = "1 Heal over 2 cycles"
 metadata/_custom_type_script = "uid://dvl7txwfa6e44"
