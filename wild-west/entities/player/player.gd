@@ -20,6 +20,7 @@ func fire_bullet() -> void:
 		bullet_container.discard_bullet(bullet_btn.bullet)
 		bullet_container.remove_child(bullet_btn)
 	bullet_container.draw_hand()
+	attack_motion(false)
 	auto_fired.emit()
 	
 

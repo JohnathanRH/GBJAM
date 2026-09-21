@@ -17,6 +17,7 @@ var under_influence: Dictionary[String, LingeringBullet]
 var vulnerable: bool = false
 var tweener: GaugeTween
 var status_container: StatusContainer
+var tween: Tween
 
 signal set_fill_speed(scale)
 signal damage_received
@@ -55,12 +56,14 @@ func receive_damage(dam: float) -> void:
 		hp -= dam
 		damage_received.emit()
 		spawn_text(str(dam))
+		receive_damage_motion()
 
 func receive_piercing_damage(dam: float) -> void:
 	if vulnerable:
 		hp -= dam
 		damage_received.emit()
 		spawn_text(str(dam))
+		receive_damage_motion()
 
 func set_hp(value: float) -> void:
 	if value >= max_hp:
@@ -85,3 +88,55 @@ func spawn_text(str: String) -> void:
 	var label: FloatUpText = float_text_scn.instantiate()
 	label.text = str
 	add_child(label)
+	
+func receive_damage_motion() -> void:
+	if tween and tween.is_running():
+		tween.kill()
+	
+	tween = create_tween()
+	tween.tween_property(self, "skew", -0.2, 0.1)\
+		.set_trans(Tween.TRANS_QUAD)\
+		.set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "skew", 0.4, 0.08)\
+		.set_trans(Tween.TRANS_CUBIC)\
+		.set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "scale:x", 1.3, 0.08)
+	tween.tween_property(self, "skew", 0.0, 0.15)\
+		.set_trans(Tween.TRANS_BACK)\
+		.set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale:x", 1.0, 0.15)
+
+
+func attack_motion(dir: bool) -> void:
+	if tween and tween.is_running():
+		tween.kill()
+	
+	var attack_dir: float = -1.0 if dir else 1.0
+	
+	var lunge_distance: float = 10.0 * attack_dir
+	var max_skew: float = -0.4 * attack_dir 
+	var original_position := self.position
+	
+	var tween = create_tween()
+	
+	tween.tween_property(self, "position:x", position.x + lunge_distance, 0.15)\
+		.set_trans(Tween.TRANS_CUBIC)\
+		.set_ease(Tween.EASE_OUT)
+		
+	tween.tween_property(self, "skew", max_skew, 0.10)\
+		.set_trans(Tween.TRANS_QUAD)\
+		.set_ease(Tween.EASE_OUT)
+		
+	tween.chain().set_parallel(true)
+	
+	tween.tween_property(self, "skew", 0.0, 0.15)\
+		.set_trans(Tween.TRANS_ELASTIC)\
+		.set_ease(Tween.EASE_OUT)
+		
+	tween.tween_property(self, "position:x", position.x + (lunge_distance * 0.8), 0.2)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN_OUT)
+		
+	tween.tween_property(self, "position:x", original_position.x, 0.2)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN_OUT)

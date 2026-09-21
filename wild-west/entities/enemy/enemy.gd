@@ -19,6 +19,7 @@ func fire_bullet() -> void:
 	else:
 		$BehaviourMan.start_with(selected_intent)
 	select_random_bullet()
+	attack_motion(true)
 
 func select_random_bullet() -> void:
 	var pool = $BehaviourMan.get_children().duplicate()
