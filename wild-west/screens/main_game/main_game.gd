@@ -23,4 +23,7 @@ func _on_enemy_death(enemy: Entity) -> void:
 func _on_victory_delay_timeout() -> void:
 	var enemies_alive = get_tree().get_node_count_in_group("enemies")
 	if enemies_alive == 0:
-		get_tree().change_scene_to_file("res://screens/bullet_pick/bullet_pick.tscn")
+		if SaveManager.file.stage_number >= Stages.stages.size()-1:
+			get_tree().change_scene_to_file("res://screens/ending/ending_scene.tscn")
+		else:
+			get_tree().change_scene_to_file("res://screens/bullet_pick/bullet_pick.tscn")

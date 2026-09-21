@@ -63,11 +63,14 @@ func receive_piercing_damage(dam: float) -> void:
 		spawn_text(str(dam))
 
 func set_hp(value: float) -> void:
-	hp = value
-	hp_set.emit(hp)
-	if hp <= 0:
-		dead.emit(self)
-		death()
+	if value >= max_hp:
+		hp = max_hp
+	else:
+		hp = value
+		hp_set.emit(hp)
+		if hp <= 0:
+			dead.emit(self)
+			death()
 
 func rewind_gauge(gauge_value: float)  -> void:
 	tweener.rewind_gauge(gauge_value)

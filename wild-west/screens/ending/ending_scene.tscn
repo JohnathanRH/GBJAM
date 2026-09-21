@@ -1,0 +1,153 @@
+[gd_scene format=3 uid="uid://d2s4yck6w1l2u"]
+
+[ext_resource type="Script" uid="uid://j11wgov4srop" path="res://screens/ending/ending_scene.gd" id="1_lw07a"]
+[ext_resource type="Texture2D" uid="uid://dd1tf6kisbdxa" path="res://assets/TESTONLY/bg.png" id="2_f5am3"]
+[ext_resource type="Texture2D" uid="uid://buvqgcwy7yr6u" path="res://assets/TESTONLY/player.png" id="3_pmjas"]
+[ext_resource type="Texture2D" uid="uid://dvnalpj2o5mr5" path="res://assets/TESTONLY/crate.png" id="4_axesa"]
+[ext_resource type="Texture2D" uid="uid://doman4jthw41n" path="res://assets/TESTONLY/whisky.png" id="5_585c7"]
+
+[sub_resource type="Animation" id="Animation_mdel1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-22, 80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(54, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_pllfy"]
+resource_name = "player_win"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.0197902, 5.014514, 5.241667, 5.4750004, 5.7, 5.9333334, 6.1666665, 6.4, 6.633333, 6.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-22, 80), Vector2(83, 80), Vector2(83, 80), Vector2(83, 71), Vector2(83, 80), Vector2(83, 71), Vector2(83, 80), Vector2(83, 71), Vector2(83, 80), Vector2(83, 71), Vector2(83, 80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.472009, 6.866469),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(54, -16), Vector2(54, -16), Vector2(54, 22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6.6398444, 6.8614807),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_03244"]
+_data = {
+&"RESET": SubResource("Animation_mdel1"),
+&"player_win": SubResource("Animation_pllfy")
+}
+
+[node name="EndingScene" type="Node2D" unique_id=1631417064]
+script = ExtResource("1_lw07a")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1007194285]
+position = Vector2(80, 72)
+texture = ExtResource("2_f5am3")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1235711320]
+libraries/ = SubResource("AnimationLibrary_03244")
+
+[node name="player" type="Sprite2D" parent="." unique_id=967827523]
+position = Vector2(-22, 80)
+texture = ExtResource("3_pmjas")
+
+[node name="crates" type="Node2D" parent="." unique_id=1566635379]
+
+[node name="crate" type="Sprite2D" parent="crates" unique_id=1853706238]
+position = Vector2(123, 87)
+texture = ExtResource("4_axesa")
+
+[node name="crate2" type="Sprite2D" parent="crates" unique_id=1542729638]
+position = Vector2(140, 87)
+texture = ExtResource("4_axesa")
+
+[node name="crate3" type="Sprite2D" parent="crates" unique_id=2011619613]
+position = Vector2(134, 71)
+texture = ExtResource("4_axesa")
+
+[node name="whisky" type="Sprite2D" parent="." unique_id=1898207257]
+position = Vector2(121, 75)
+texture = ExtResource("5_585c7")
+
+[node name="whisky2" type="Sprite2D" parent="." unique_id=270975746]
+position = Vector2(112, 91)
+texture = ExtResource("5_585c7")
+
+[node name="whisky3" type="Sprite2D" parent="." unique_id=2137841130]
+position = Vector2(105.00001, 93)
+rotation = -1.5707964
+texture = ExtResource("5_585c7")
+
+[node name="Label" type="Label" parent="." unique_id=893099352]
+offset_left = 54.0
+offset_top = -16.0
+offset_right = 108.0
+offset_bottom = -3.0
+theme_override_colors/font_color = Color(0.8352941, 0.84705883, 0.81960785, 1)
+text = "You Win!!"
+
+[node name="Label2" type="Label" parent="." unique_id=1328635131]
+visible = false
+offset_left = 12.0
+offset_top = 34.0
+offset_right = 150.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.8352941, 0.84705883, 0.81960785, 1)
+text = "Start to reset the game"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

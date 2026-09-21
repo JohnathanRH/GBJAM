@@ -17,3 +17,9 @@ func load_file() -> void:
 
 func save() -> void:
 	ResourceSaver.save(file, save_path)
+
+func destroy() -> void:
+	if ResourceLoader.exists(save_path):
+		file = null
+		DirAccess.remove_absolute(save_path)
+		load_file()

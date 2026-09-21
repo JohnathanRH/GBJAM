@@ -28,7 +28,7 @@ func set_selected_bullet(bullet: Bullet) -> void:
 	bullet_selected.emit()
 
 func death() -> void:
-	pass
+	get_tree().change_scene_to_file("res://screens/death_screen/death_screen.tscn")
 
 func manual_fire() -> void:
 	pass

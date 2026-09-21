@@ -7,7 +7,11 @@ var loot_pointer: int = 0:
 	set = set_loot_pointer
 
 func _enter_tree() -> void:
-	var player = SaveManager.file.player_resource
+	var save_file:SaveFile = SaveManager.file
+	save_file.stage_number += 1
+	SaveManager.save()
+	
+	var player: PlayerResource = save_file.player_resource
 	$SelectablesContainer.ui_selected.connect(_on_ui_selected)
 	for bullet_scn: PackedScene in player.bullets:
 		var button: SelectableBullet = button_scn.instantiate()
